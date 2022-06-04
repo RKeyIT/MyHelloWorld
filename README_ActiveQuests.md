@@ -5,7 +5,7 @@
 
     -   currentCoins = current moneys in account.
     -   payDay = date of general money up.
-    -   changeCoins = for add/lose moneys on account for a some time.
+    -   ??? changeCoins = for add/lose moneys on account for a some time.
 
 
 **CreateArrays**
