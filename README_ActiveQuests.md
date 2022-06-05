@@ -1,5 +1,16 @@
 **Quest 3**
 
+**createFunctionForCalculateFreeMoneysPerDay**
+
+Function #1:    variable for count of moneys what user want to save.
+Function #2:    calculate full added - full lessed - saved moneys.
+Function #3:    calculate result of Function #2 / days of current month.
+
+**createSystemOfSortAmountsOfDaysInMonths**
+
+february 28(29) days
+september 31 days
+and other...
 
 
 

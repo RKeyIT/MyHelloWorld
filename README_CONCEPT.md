@@ -8,4 +8,5 @@
 
 <!-- CONCEPTS -->
     Some newest ideas:
-    1. 
+    1. Calendar with all operations.
+    2. Full history on the list and in the calendar.
