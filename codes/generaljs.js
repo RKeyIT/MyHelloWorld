@@ -9,8 +9,17 @@ let lessedMoneys = []   //  red values
 //  OBJECTS
 
 //example//
-let coins = {
-    comment : '',   //user comment like 'buying bread'
-    amount : value, //positive number
-    color : green,  //green for positive, red for negative
-}
+// let coins = {
+//     comment : '',   //user comment like 'buying bread'
+//     amount : value, //positive number
+//     color : green,  //green for positive, red for negative
+// }
+
+//  OPERATIONS
+function calculateThis(){  
+        let changeCoinsOn = document.getElementById("add").value;
+        addedMoneys.push(changeCoinsOn);
+    }
+calculateThis();
+console.log(addedMoneys);
+console.log(lessedMoneys);
