@@ -7,6 +7,8 @@ let addedMoneys = []    //  green values
 let lessedMoneys = []   //  red values
 
 //  OBJECTS
+
+//example//
 let coins = {
     comment : '',   //user comment like 'buying bread'
     amount : value, //positive number

@@ -1,4 +1,16 @@
-**CreateVariables**
+**CreateFormForUser**
+
+This form must return amount of money entered by user.
+Positive amount must be writted for "addedMoneys" array
+Negatuve for "lessedMoneys"
+
+This will be calculate later for write in "currentCoins" variable.
+Code this and return result in "currentCoins"
+
+
+
+
+<!-- **CreateVariables**
 
     Let's create variables for my programm.
     What a variables we need?
@@ -24,4 +36,4 @@
         comment: 'for what',
         amount: number,
         color: green/red (+/-),
-    }
+    } -->
