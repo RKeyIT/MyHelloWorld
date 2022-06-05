@@ -8,17 +8,34 @@
 </head>
 <body>
     <script src="generaljs.js"></script>
-    <p>    <!--  For add coins page -->
-        <label>Add coins<input type="text" id="add" placeholder="Some number"></label>
-    </p>
-    <p>
-        <button type="submit">Add</button>
-    </p>
-    <p>     <!--  For lose coins page -->
-        <label>Lose coins<input type="text" id="lose" placeholder="Some number"></label>
-    </p>
-    <p>
-        <button type="submit">Lose</button>
-    </p>
+    <div class="add">
+        <p>    <!--  For add coins page -->
+            <label>Add coins<input type="text" id="add" placeholder="Some number"></label>
+        </p>
+        <p>
+            <label>From what you added?<input type="text" id="addedFrom" placeholder="Reason"></label>
+        </p>
+        <p>
+            <button type="submit">Add</button>
+        </p>
+    </div>
+    <div class="lose">
+        <p>     <!--  For lose coins page -->
+            <label>Lose coins<input type="text" id="less" placeholder="Some number"></label>
+        </p>
+        <p>
+            <label>For what your want lose moneys?<input type="text" id="losedFor" placeholder="Reason"></label>
+        </p>
+        <p>
+            <button type="submit">Lose</button>
+        </p>
+    </div>
+    <div class="currentMoneys">
+        <p>
+            <label for="current">currentMoneys
+                <p id="yourCurrent"></p>
+            </label>
+        </p>
+    </div>
 </body>
 </html>
