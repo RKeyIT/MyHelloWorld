@@ -1,3 +1,10 @@
+**Quest 3**
+
+
+
+
+<!-- **Quest 2**
+
 **CreateFormForUser**
 
 This form must return amount of money entered by user.
@@ -6,11 +13,14 @@ Negatuve for "lessedMoneys"
 
 This will be calculate later for write in "currentCoins" variable.
 Code this and return result in "currentCoins"
+ -->
 
 
 
 
-<!-- **CreateVariables**
+<!-- **Quest 1** 
+
+**CreateVariables**
 
     Let's create variables for my programm.
     What a variables we need?

@@ -8,21 +8,15 @@ let lessedMoneys = []   //  red values
 
 //  OBJECTS
 
-let coin = {}
-let coinL = {}
-//example//
-// let coins = {
-//     comment : '',   //user comment like 'buying bread'
-//     amount : value, //positive number
-//     color : green,  //green for positive, red for negative
-//     date : 01.01.01 //date of operation
-// }
+let coin = {}   //  positive coins
+let coinL = {}  //  negative coins
 
 //  OPERATIONS
+//  add new positive coins in array "coin"
 function addCoins() {
     coin = {
         comment: document.getElementById('addedFrom').value,
-        amount: document.getElementById("add").value,
+        amount: Number(document.getElementById("add").value),
         color: 'green',
         date: new Date(),
     }
@@ -30,12 +24,11 @@ function addCoins() {
     addedMoneys.push(coin)
 }
 
-// FUNCTION IN BOTTOM DIDNT WORK IF WE HAVE "IF"
-// BUT WE CAN USE THIS FUNCTIONЫ ON DIFFERENT PAGES
+//  add new negative coins in array "coinL"
 function lessCoins() {
     coinL = {
         comment: document.getElementById('losedFor').value,
-        amount: document.getElementById("less").value,
+        amount: Number(document.getElementById("less").value),
         color: 'red',
         date: new Date(),
     }
@@ -44,11 +37,17 @@ function lessCoins() {
 }
 
 
-// RELAX TIME...
 function calculateCurrent() {
-    sumAdd
-    for (i = 0 ; i < addedMoneys[-1] ; i++) {
-        sumAdd += addedMoneys[-1]
+    //some code
+    sum = 0;
+    minusSum = 0;
+    result = 0;
+    for (i = 0; i < addedMoneys.length; i++) {
+        sum += addedMoneys[i].amount;
     }
-    sumLess =
+    for (i = 0; i < lessedMoneys.length; i++) {
+        minusSum += lessedMoneys[i].amount;
+    }
+    result = sum - minusSum;
+    document.getElementById('yourCurrent').innerHTML = result;
 }
