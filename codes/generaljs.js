@@ -1,6 +1,7 @@
 //  VARIABLES
-let currentCoins // general moneys in account
-let payday //   Day in date of general money add.
+let currentCoins = 0    // general moneys in account
+let depositeCoins = 0   //    Coins for save "every month"
+let payday              //   Day of date of general money add.
 
 //  ARRAYS
 let addedMoneys = []    //  green values
@@ -37,6 +38,17 @@ function lessCoins() {
     lessedMoneys.push(coinL)
 }
 
+//  deposite function CONCEPT
+//  THINK ABOUT DO THIS LIKE AN OBJECT FOR GENERAL HISTORY
+//  comment: 'save for future', amount: getElem..., color: blue, date: new Date(),
+function saveCoins() {
+    depositeCoins = Number(document.getElementById('save').value);
+    if (depositeCoins === 0 || depositeCoins === "" ||
+        depositeCoins === undefined || depositeCoins === null) {
+            return 0;
+        }
+    else {return depositeCoins}
+}
 
 function calculateCurrent() {
     //some code
@@ -49,6 +61,6 @@ function calculateCurrent() {
     for (i = 0; i < lessedMoneys.length; i++) {
         minusSum += lessedMoneys[i].amount;
     }
-    result = sum - minusSum;
+    result = sum - minusSum - depositeCoins;
     document.getElementById('yourCurrent').innerHTML = result;
 }
