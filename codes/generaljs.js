@@ -4,6 +4,7 @@ let payday //   Day in date of general money add.
 
 //  ARRAYS
 let addedMoneys = []    //  green values
+                        //  always green values - red values
 let lessedMoneys = []   //  red values
 
 //  OBJECTS
