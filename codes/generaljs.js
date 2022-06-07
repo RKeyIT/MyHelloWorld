@@ -64,3 +64,11 @@ function calculateCurrent() {
     result = sum - minusSum - depositeCoins;
     document.getElementById('yourCurrent').innerHTML = result;
 }
+
+//////////////////////////
+//  STRONG CODE BLOCK   //
+//////////////////////////
+function spendPerDay() {
+    spendResult = result / 30; // "30" count of days. That must take it from month by automaticly.
+    document.getElementById('perDay').innerHTML = spendResult;
+}
