@@ -1,3 +1,8 @@
+//  !!! NEW !!!
+//  SELECTORS   //
+// const someButton = document.getElementById('#spendButton');
+//  for example... for what?
+
 //  VARIABLES
 let currentCoins = 0    // general moneys in account
 let depositeCoins = 0   //    Coins for save "every month"
@@ -24,6 +29,7 @@ function addCoins() {
     }
     if(coin.amount === "" || coin.amount === "0") {return}
     addedMoneys.push(coin)
+    calculateCurrent()
 }
 
 //  add new negative coins in array "coinL"
@@ -36,6 +42,7 @@ function lessCoins() {
     }
     if(coinL.amount === "" || coinL.amount === "0") {return}
     lessedMoneys.push(coinL)
+    calculateCurrent()
 }
 
 //  deposite function CONCEPT
@@ -47,7 +54,10 @@ function saveCoins() {
         depositeCoins === undefined || depositeCoins === null) {
             return 0;
         }
-    else {return depositeCoins}
+    else {
+        calculateCurrent()
+        return depositeCoins
+    }
 }
 
 function calculateCurrent() {
@@ -65,11 +75,15 @@ function calculateCurrent() {
     document.getElementById('yourCurrent').innerHTML = result;
 }
 
+
 //////////////////////////
 //  STRONG CODE BLOCK   //
 //////////////////////////
 function spendPerDay() {
+    calculateCurrent()
+    // EXPERIMENTAL spendResult
     spendResult = result / 30; // "30" count of days. That must take it from month by automaticly.
+    // EXPERIMENTAL spendResult
     document.getElementById('perDay').innerHTML = Math.floor(spendResult);      //  ??? Math.round better ???
 }
-
+//  INCOMPREHENSIBLE CODE WITH DATES    //

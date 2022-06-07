@@ -16,7 +16,7 @@
             <label>From what you added?<input type="text" id="addedFrom" placeholder="Reason"></label>
         </p>
         <p>
-            <button type="submit">Add</button>
+            <button type="submit" id="addButton" onclick="addCoins()">Add</button>
         </p>
     </div>
     <div class="lose">
@@ -27,7 +27,7 @@
             <label>For what your want lose moneys?<input type="text" id="losedFor" placeholder="Reason"></label>
         </p>
         <p>
-            <button type="submit">Lose</button>
+            <button type="submit" id="loseButton" onclick="lessCoins()">Lose</button>
         </p>
     </div>
     <div class="save">
@@ -35,17 +35,18 @@
             <label>What count of coins you want to save?</label><input type="text" id="save" placeholder="Some number">
         </p>
         <p>
-            <button type="submit">Save</button>
+            <button type="submit" id="saveButton" onclick="saveCoins()">Save</button>
         </p>
     </div>
     <div class="currentMoneys">
         <p>
-            <label for="current">Current moneys
+            <label for="current">Current coins
                 <span id="yourCurrent"></span>
             </label>
         </p>
     </div>
     <div class="perDay">
+        <button type="submit" id="spendButton" onclick="spendPerDay()">How much i can spend today?</button>
         <p>
             <label for="perDay">You can to spend <span id="perDay">0</span> coins today.</label>
         </p>
