@@ -1,6 +1,6 @@
 //  !!! NEW !!!
 //  SELECTORS   //
-// const someButton = document.getElementById('#spendButton');
+//          const someButton = document.getElementById('#spendButton');
 //  for example... for what?
 
 //  VARIABLES
@@ -23,13 +23,14 @@ let coinL = {}  //  negative coins
 function addCoins() {
     coin = {
         comment: document.getElementById('addedFrom').value,
-        amount: Number(document.getElementById("add").value),
+        amount: Number(document.getElementById('add').value),
         color: 'green',
         date: new Date(),
     }
     if(coin.amount === "" || coin.amount === "0") {return}
-    addedMoneys.push(coin)
-    calculateCurrent()
+    addedMoneys.push(coin);
+    calculateCurrent();
+    document.getElementById('add').innerHTML = ''; // DIDNT WORK
 }
 
 //  add new negative coins in array "coinL"
