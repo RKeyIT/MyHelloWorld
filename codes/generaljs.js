@@ -4,19 +4,22 @@
 //  for example... for what?
 
 //  VARIABLES
-let currentCoins = 0    // general moneys in account
-let depositeCoins = 0   //    Coins for save "every month"
-let payday              //   Day of date of general money add.
+let currentCoins = 0;   // general moneys in account
+let depositeCoins = 0;  //    Coins for save "every month"
+let payday;             //   Day of date of general money add.
+let nothing = '';       // For clearing forms after pushing button.
 
 //  ARRAYS
-let addedMoneys = []    //  green values
+let addedMoneys = [];   //  green values
                         //  always green values - red values
-let lessedMoneys = []   //  red values
+let lessedMoneys = [];  //  red values
+
+let depositeMoneys = [];
 
 //  OBJECTS
 
-let coin = {}   //  positive coins
-let coinL = {}  //  negative coins
+let coin = {};   //  positive coins
+let coinL = {};  //  negative coins
 
 //  OPERATIONS
 //  add new positive coins in array "coin"
@@ -30,8 +33,10 @@ function addCoins() {
     if(coin.amount === "" || coin.amount === "0") {return}
     addedMoneys.push(coin);
     calculateCurrent();
-    document.getElementById('add').innerHTML = ''; // DIDNT WORK
-}
+    spendPerDay();
+    document.getElementById('add').value = '';
+    document.getElementById('addedFrom').value = '';
+};
 
 //  add new negative coins in array "coinL"
 function lessCoins() {
@@ -42,9 +47,12 @@ function lessCoins() {
         date: new Date(),
     }
     if(coinL.amount === "" || coinL.amount === "0") {return}
-    lessedMoneys.push(coinL)
-    calculateCurrent()
-}
+    lessedMoneys.push(coinL);
+    calculateCurrent();
+    spendPerDay();
+    document.getElementById('less').value = '';
+    document.getElementById('losedFor').value = '';
+};
 
 //  deposite function CONCEPT
 //  THINK ABOUT DO THIS LIKE AN OBJECT FOR GENERAL HISTORY
@@ -52,14 +60,19 @@ function lessCoins() {
 function saveCoins() {
     depositeCoins = Number(document.getElementById('save').value);
     if (depositeCoins === 0 || depositeCoins === "" ||
-        depositeCoins === undefined || depositeCoins === null) {
-            return 0;
+        depositeCoins === undefined || depositeCoins === null ||
+        depositeCoins === NaN) {
+            spendPerDay();
+            document.getElementById('save').value = '';
         }
     else {
-        calculateCurrent()
-        return depositeCoins
+        depositeMoneys.push(depositeCoins);
+        calculateCurrent();
+        spendPerDay();
+        document.getElementById('save').value = '';
+        return depositeCoins;
     }
-}
+};
 
 function calculateCurrent() {
     //some code
@@ -76,33 +89,41 @@ function calculateCurrent() {
     document.getElementById('yourCurrent').innerHTML = result;
 }
 
-
-function defaultCountOfForm() {
-    document.getElementById().innerHTML = ''
-}
-
 //////////////////////////
 //  STRONG CODE BLOCK   //
 //////////////////////////
 function spendPerDay() {
-    calculateCurrent()
+    calculateCurrent();
+    countOfDays();
     function countOfDays() {
-        currentDate = new Date()
         //EXPERIMENTAL CONSOLE CODE
-        //
-        //date = new Date();
-        //firstDay = date.getDate() - (date.getDate() - 1)
-        //month = date.getMonth();
-        //year = date.getYear();
-        //nextMonth = new Date(year, month, firstDay)
-        //
+        dateOne = new Date();
+        dateTwo = dateOne.setDate(dateOne.getDate() + 30);
+        currentDate = new Date();
+        if (dateOne.getDate() === currentDate.getDate()) {
+            //	count of days in the current month = 30
+            spendResult = result / 30
+        }
+        if (dateOne.getDate() - 2 === currentDate.getDate()) {
+            //	count of days in the current month = 28
+            spendResult = result / 28
+        }
+        if (dateOne.getDate() - 1 === currentDate.getDate()) {
+            //	count of days in the current month = 29
+            spendResult = result / 29
+        }
+        if (dateOne.getDate() > currentDate.getDate()) {
+            //	count of days in the current month = 31
+            spendResult = result / 31
+        }
         //DO WITH THAT SOMETHING!
-        if (monthOfYear.getMonth() )
+        
             
-    }
-    // EXPERIMENTAL spendResult
-    spendResult = result / 30; // "30" count of days. That must take it from month by automaticly.
+    };
     // EXPERIMENTAL spendResult
     document.getElementById('perDay').innerHTML = Math.floor(spendResult);      //  ??? Math.round better ???
 }
 //  INCOMPREHENSIBLE CODE WITH DATES    //
+//////////////////////////
+//STRONG CODE BLOCK ENDS//
+//////////////////////////

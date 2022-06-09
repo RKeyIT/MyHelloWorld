@@ -1,6 +1,13 @@
-**Quest 3**
-**GeneralSystem**
+**Qest 4**
 
+re-change wrong names on good
+(like loseMoneys => spendMoneys)
+
+
+
+<!-- **Quest 3**
+**GeneralSystem**
+ -->
 
 <!-- **createFunctionForCalculateFreeMoneysPerDay**
 
@@ -10,14 +17,14 @@ Function #1:    variable for count of moneys what user want to save.
 Function #2:    calculate full added - full lessed - saved moneys.
     A little rework for general formula. -->
 
-Function #3:    calculate result of Function #2 / days of current month.
+<!-- Function #3:    calculate result of Function #2 / days of current month.
     Calculate count of days in "that" month and calculate general formula with it.
 
 **createSystemOfSortAmountsOfDaysInMonths**
 
 february 28(29) days
 september 31 days
-and other...
+and other... -->
 
 
 
