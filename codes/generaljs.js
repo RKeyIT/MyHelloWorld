@@ -77,11 +77,29 @@ function calculateCurrent() {
 }
 
 
+function defaultCountOfForm() {
+    document.getElementById().innerHTML = ''
+}
+
 //////////////////////////
 //  STRONG CODE BLOCK   //
 //////////////////////////
 function spendPerDay() {
     calculateCurrent()
+    function countOfDays() {
+        currentDate = new Date()
+        //EXPERIMENTAL CONSOLE CODE
+        //
+        //date = new Date();
+        //firstDay = date.getDate() - (date.getDate() - 1)
+        //month = date.getMonth();
+        //year = date.getYear();
+        //nextMonth = new Date(year, month, firstDay)
+        //
+        //DO WITH THAT SOMETHING!
+        if (monthOfYear.getMonth() )
+            
+    }
     // EXPERIMENTAL spendResult
     spendResult = result / 30; // "30" count of days. That must take it from month by automaticly.
     // EXPERIMENTAL spendResult
