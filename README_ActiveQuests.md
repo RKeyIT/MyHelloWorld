@@ -3,6 +3,14 @@
 re-change wrong names on good
 (like loseMoneys => spendMoneys)
 
+rework calculator. That's must calculate accepted spends based on current day
+FOR EXAMPLE:
+
+    1. payDay today. That means payDay moneys / 30
+        3000 / 30 = 100 coins per day can be spend
+    2. payDay was a week ago. 
+        3000 / 23 = 130... coins per day can be spend
+    AND OTHER EXAMPLES...
 
 
 <!-- **Quest 3**
