@@ -6,7 +6,24 @@
 //  VARIABLES
 let currentCoins = 0;   // general moneys in account
 let depositeCoins = 0;  //    Coins for save "every month"
-let payday;             //   Day of date of general money add.
+
+//
+//  *   Another one strong code moment.
+    let payday  =   0;             //   Day of date of general money takes.
+    function payDay() {
+        payday = Number(document.getElementById('payday').value);
+        if (payday > 28) {
+            return Error();
+        }
+        if (payday <= 28) {
+            return payday;
+        }
+    }
+//  *   This is basic date.
+//  *   Application must take this date installed by user 
+//  *   For do all calculate operations based on this day.
+//
+
 let nothing = '';       // For clearing forms after pushing button.
 
 //  ARRAYS

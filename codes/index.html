@@ -8,6 +8,13 @@
 </head>
 <body>
     <script src="generaljs.js"></script>
+    <div class="payday">
+        <p>
+            <label for="">PayDay<input type="text" name="DayOfPayDay" id="payday"
+                value="" placeholder="Your day of PayDay"></label>
+            <button type="submit" id="payDayButton" onclick="payDay()">Add day</button>
+        </p>
+    </div>
     <div class="add">
         <p>    <!--  For add coins page -->
             <label>Add coins<input type="text" id="add" placeholder="Some number" value=""></label>
@@ -46,7 +53,7 @@
         </p>
     </div>
     <div class="perDay">
-        <button type="submit" id="spendButton" onclick="spendPerDay()">How much i can spend today?</button>
+        <!-- <button type="submit" id="spendButton" onclick="spendPerDay()">How much i can spend today?</button> -->
         <p>
             <label for="perDay">You can to spend <span id="perDay">0</span> coins today.</label>
         </p>
