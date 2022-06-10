@@ -22,6 +22,8 @@ Arrays, Objects, Variables:
 
 **Arrays**:
 
+Arrays use word **Moneys** for example 'addedMoneys'
+
 FOR HISTORY:
 
 lessedMoneys[] **RedColor**
