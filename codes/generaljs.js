@@ -9,14 +9,16 @@ let depositeCoins = 0;  //    Coins for save "every month"
 
 //
 //  *   Another one strong code moment.
+//  *   REPLACE THIS ALL OUT FROM HERE
     let payday  =   0;             //   Day of date of general money takes.
     function payDay() {     // EXPERIMENTAL DATE OF PAYDAY
         payday = Number(document.getElementById('payday').value);
         if (payday > 28) {
-            return Error();
+            return;
         }
         if (payday <= 28) {
-            return payday = Number(document.getElementById('payday').value);
+            payday = Number(document.getElementById('payday').value);
+            document.getElementById('payday').value = '';
         }
     }
 //  *   This is basic date.
@@ -45,7 +47,7 @@ function addCoins() {
         color: 'green',
         date: new Date(),
     }
-    if(addedCoin.amount === "" || addedCoin.amount === "0") {return}
+    if(addedCoin.amount === '' || addedCoin.amount === 0) {return 0}
     addedMoneys.push(addedCoin);
     calculateCurrent();
     spendPerDay();
@@ -61,7 +63,7 @@ function spendCoins() {
         color: 'red',
         date: new Date(),
     }
-    if(spendedCoin.amount === '' || spendedCoin.amount === '0') {return}
+    if(spendedCoin.amount === '' || spendedCoin.amount === 0) {return 0}
     lessedMoneys.push(spendedCoin);
     calculateCurrent();
     spendPerDay();
@@ -119,6 +121,40 @@ function countOfDays() {
     dateOne = new Date();
     dateTwo = dateOne.setDate(dateOne.getDate() + 30);
     currentDate = new Date();
+    
+    //DO WITH THAT SOMETHING!
+    if (payday >= currentDate.getDate()) {
+        afterDate();
+    } else {
+        beforeDate();
+    }
+        
+};
+
+function beforeDate() {
+    if (dateOne.getDate() === currentDate.getDate()) {
+        //	count of days in the current month = 30
+        spendResult = result / (30 - currentDate.getDate() + payday)
+        document.getElementById('leftToPayday').innerHTML = 30 - currentDate.getDate() + payday;
+    }
+    if (dateOne.getDate() - 2 === currentDate.getDate()) {
+        //	count of days in the current month = 28
+        spendResult = result / (28 - currentDate.getDate() + payday)
+        document.getElementById('leftToPayday').innerHTML = 28 - currentDate.getDate() + payday;
+    }
+    if (dateOne.getDate() - 1 === currentDate.getDate()) {
+        //	count of days in the current month = 29
+        spendResult = result / (29 - currentDate.getDate() + payday)
+        document.getElementById('leftToPayday').innerHTML = 29 - currentDate.getDate() + payday;
+    }
+    if (dateOne.getDate() > currentDate.getDate()) {
+        //	count of days in the current month = 31
+        spendResult = result / (31 - currentDate.getDate() + payday)
+        document.getElementById('leftToPayday').innerHTML = 31 - currentDate.getDate() + payday;
+    }
+}
+
+function afterDate() {
     if (dateOne.getDate() === currentDate.getDate()) {
         //	count of days in the current month = 30
         spendResult = result / (30 - currentDate.getDate() - payday)
@@ -139,11 +175,7 @@ function countOfDays() {
         spendResult = result / (31 - currentDate.getDate() - payday)
         document.getElementById('leftToPayday').innerHTML = 31 - currentDate.getDate() - payday;
     }
-    //DO WITH THAT SOMETHING!
-    
-        
-};
-
+}
 
 //  INCOMPREHENSIBLE CODE WITH DATES    //
 //////////////////////////
