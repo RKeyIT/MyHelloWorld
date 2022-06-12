@@ -29,7 +29,7 @@ let depositeCoins = 0;  //    Coins for save "every month"
 //  ARRAYS
 let addedMoneys = [];   //  green values
                         //  always green values - red values
-let lessedMoneys = [];  //  red values
+let spendedMoneys = [];  //  red values
 
 let depositeMoneys = [];//  blue values (array for save saved coins)
 
@@ -64,7 +64,7 @@ function spendCoins() {
         date: new Date(),
     }
     if(spendedCoin.amount === '' || spendedCoin.amount === 0) {return 0}
-    lessedMoneys.push(spendedCoin);
+    spendeddMoneys.push(spendedCoin);
     calculateCurrent();
     spendPerDay();
     document.getElementById('less').value = '';
@@ -99,8 +99,8 @@ function calculateCurrent() {
     for (i = 0; i < addedMoneys.length; i++) {
         sum += addedMoneys[i].amount;
     }
-    for (i = 0; i < lessedMoneys.length; i++) {
-        minusSum += lessedMoneys[i].amount;
+    for (i = 0; i < spendedMoneys.length; i++) {
+        minusSum += spendedMoneys[i].amount;
     }
     result = sum - minusSum - depositeCoins;
     document.getElementById('yourCurrent').innerHTML = result;

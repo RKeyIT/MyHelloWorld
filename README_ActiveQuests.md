@@ -1,16 +1,16 @@
 **Qest 4**
 
-re-change wrong names on good
+re-change incorrect names
 (like loseMoneys => spendMoneys)
 
-rework calculator. That's must calculate accepted spends based on current day
+<!-- rework calculator. That's must calculate accepted spends based on current day
 FOR EXAMPLE:
 
     1. payDay today. That means payDay moneys / 30
         3000 / 30 = 100 coins per day can be spend
     2. payDay was a week ago. 
         3000 / 23 = 130... coins per day can be spend
-    AND OTHER EXAMPLES...
+    AND OTHER EXAMPLES... -->
 
 **Quest 4.1 ATTANTION FIX**
 
@@ -19,7 +19,9 @@ FOR EXAMPLE:
     null string is can't be argument for getElementById()
                                             index.html
 
-    FIX IT
+    FIX IT:
+
+        1) Trouble place was finded. That is payDay input. Something wrong with it.
 
 
 
