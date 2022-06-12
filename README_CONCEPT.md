@@ -10,3 +10,5 @@
     Some newest ideas:
     1. Calendar with all operations.
     2. Full history on the list and in the calendar.
+    3. Add evening-questions what for was reChanged money balance today.
+    4. Connect pay card to app and sinchronise data.
