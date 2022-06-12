@@ -1,16 +1,35 @@
-**Qest 4**
+
+**Quest 5**
+
+    1.  was finded bugs with payDay input. If into input place number like 28 and higher
+        calculater will be wrong work. It's returns negative number of day lefts to payday.
+
+    2.  Input payDay must accept only numbers 1-28
+        
+        2.1     Develop new conception for days of PayDay
+                How that can be correct?
+                May be payDay input didn't need?
+                We can use first day of each month for that.
+
+        2.2     App must accept only correct days!
+
+    3.  Into app can't be negative numbers. 
+        That's must to safe user against this.
+
+
+<!-- **Qest 4**
 
 re-change incorrect names
 (like loseMoneys => spendMoneys)
 
-<!-- rework calculator. That's must calculate accepted spends based on current day
+rework calculator. That's must calculate accepted spends based on current day
 FOR EXAMPLE:
 
     1. payDay today. That means payDay moneys / 30
         3000 / 30 = 100 coins per day can be spend
     2. payDay was a week ago. 
         3000 / 23 = 130... coins per day can be spend
-    AND OTHER EXAMPLES... -->
+    AND OTHER EXAMPLES...
 
 **Quest 4.1 ATTANTION FIX**
 
@@ -22,6 +41,7 @@ FOR EXAMPLE:
     FIX IT:
 
         1) Trouble place was finded. That is payDay input. Something wrong with it.
+        2) Trouble was with <label> tag. That must was placed before input. (Input cant be into label) -->
 
 
 
