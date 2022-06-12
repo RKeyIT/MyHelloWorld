@@ -12,6 +12,16 @@ FOR EXAMPLE:
         3000 / 23 = 130... coins per day can be spend
     AND OTHER EXAMPLES...
 
+**Quest 4.1 ATTANTION FIX**
+
+    something was wrong and now we have *ATTANTION*:
+
+    null string is can't be argument for getElementById()
+                                            index.html
+
+    FIX IT
+
+
 
 <!-- **Quest 3**
 **GeneralSystem**
