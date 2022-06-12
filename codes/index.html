@@ -11,13 +11,14 @@
     <div class="payday">
         <p>
             <label for="">PayDay<input type="text" name="DayOfPayDay" id="payday"
-                value="" placeholder="Your day of PayDay"></label>
+                value="" placeholder="Your day of PayDay" oninput="inputOnlyNums(this)"></label>
             <button type="submit" id="payDayButton" onclick="payDay()">Add day</button>
         </p>
     </div>
     <div class="add">
         <p>    <!--  For add coins page -->
-            <label>Add coins<input type="text" id="add" placeholder="Some number" value=""></label>
+            <label>Add coins<input type="text" id="add" placeholder="Some number" value=""
+                oninput="inputOnlyNums(this)"></label>
         </p>
         <p>
             <label>From what you added?<input type="text" id="addedFrom" placeholder="Reason" value=""></label>
@@ -28,7 +29,8 @@
     </div>
     <div class="lose">
         <p>     <!--  For lose coins page -->
-            <label>Lose coins<input type="text" id="less" placeholder="Some number" value=""></label>
+            <label>Lose coins<input type="text" id="less" placeholder="Some number" value=""
+                oninput="inputOnlyNums(this)"></label>
         </p>
         <p>
             <label>For what your want lose moneys?<input type="text" id="losedFor" placeholder="Reason" value=""></label>
@@ -39,7 +41,8 @@
     </div>
     <div class="save">
         <p>     <!--  For lose coins page -->
-            <label>What count of coins you want to save?</label><input type="text" id="save" placeholder="Some number" value="">
+            <label>What count of coins you want to save?<input type="text" id="save"
+                oninput="inputOnlyNums(this)" placeholder="Some number" value=""></label>
         </p>
         <p>
             <button type="submit" id="saveButton" onclick="saveCoins()">Save</button>

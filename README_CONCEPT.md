@@ -1,10 +1,12 @@
 # MyHelloWorld
+
  1stPetProject
 
 
 <!-- NOTES -->
-<!--1. --DONE-- Result from input must be written like Object with "comment", "amount", "color". -->
-    2. Input with added/lessed moneys must accept only numbers.
+<!--1. --DONE--     Result from input must be written like Object with "comment", "amount", "color". -->
+<!--2. --DONE--     Input with added/lessed moneys must accept only numbers. -->
+3.
 
 <!-- CONCEPTS -->
     Some newest ideas:
