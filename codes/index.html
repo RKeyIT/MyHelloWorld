@@ -10,8 +10,8 @@
     <script src="generaljs.js"></script>
     <div class="payday">
         <p>
-            <label for="">PayDay</label><input type="text" name="DayOfPayDay" id="payday"
-                placeholder="Your day of PayDay" oninput="inputOnlyNums(this)"
+            <label for="">Day of PayDay</label><input type="number" min="1" max="28" maxlength="2"
+                name="DayOfPayDay" id="payday" placeholder="Your day of PayDay" oninput="inputOnlyNums(this)"
                 value="">
             <button type="submit" id="payDayButton" onclick="payDay()">Add day</button>
         </p>

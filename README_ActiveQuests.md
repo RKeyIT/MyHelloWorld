@@ -1,10 +1,26 @@
 
 **Quest 5**
 
-    1.  was finded bugs with payDay input. If into input place number like 28 and higher
+    1. HOT re-QUEST**
+            payDay() and payday must be reworked!
+            this is wrong work. 
+
+            This must accept only numbers in 1-28
+            This can't accept any more than 2 symbols of date.
+
+                ...subs...
+            Payday can be installed only in 1-28 or installed on first day of each month.
+            if (something) {install on 1-28 values} else {install 1}
+
+
+    2.  Was finded bugs with payDay input. If into input place number like 28 and higher
         calculater will be wrong work. It's returns negative number of day lefts to payday.
 
-    2.  Input payDay must accept only numbers 1-28
+        !!!
+        may be do it like list and fix 1 and 2 quests by one?
+        !!!
+
+    3.  Input payDay must accept only numbers 1-28
         
         2.1     Develop new conception for days of PayDay
                 How that can be correct?
@@ -13,7 +29,7 @@
 
         2.2     App must accept only correct days!
 
-    3.  Into app can't be negative numbers. 
+    4.  Into app can't be negative numbers. 
         That's must to safe user against this.
 
 

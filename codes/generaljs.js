@@ -12,15 +12,29 @@ let depositeCoins = 0;  //    Coins for save "every month"
 //  *   REPLACE THIS ALL OUT FROM HERE
     let payday  =   0;             //   Day of date of general money takes.
     function payDay() {     // EXPERIMENTAL DATE OF PAYDAY
-        payday = Number(document.getElementById('payday').value);
         if (payday > 28) {
-            return;
+            document.getElementById('payday').innerHTML = 'Wrong date. Set day < 28';
         }
         if (payday <= 28) {
-            payday = Number(document.getElementById('payday').value);
+            payday = Number(document.getElementById('payday').value)
             document.getElementById('payday').value = '';
         }
     }
+//  ******************************************************
+///////////////////////////////////////////////////     **
+//  EXPERIMENTAL CODE WITHOUT BASICS KNOWLENDGE  //     **
+///////////////////////////////////////////////////     **
+const inputOnlyNums = e => {                     //     **
+    const value = e.value;                       //     **
+    if (e.value <= 28) {
+        e.value = value.replace(/\D/g, '');
+    };
+}                                                //     **
+///////////////////////////////////////////////////     **
+//  EXPERIMENTAL CODE WITHOUT BASICS KNOWLENDGE  //     **
+///////////////////////////////////////////////////     **
+//  ******************************************************
+
 //  *   This is basic date.
 //  *   Application must take this date installed by user 
 //  *   For do all calculate operations based on this day.
@@ -120,8 +134,7 @@ function countOfDays() {
     //EXPERIMENTAL CONSOLE CODE
     dateOne = new Date();
     dateTwo = dateOne.setDate(dateOne.getDate() + 30);
-    currentDate = new Date();
-    
+    currentDate = new Date();    
     //DO WITH THAT SOMETHING!
     if (payday >= currentDate.getDate()) {
         afterDate();
@@ -182,15 +195,3 @@ function afterDate() {
 //STRONG CODE BLOCK ENDS//
 //////////////////////////
 
-//  ******************************************************
-///////////////////////////////////////////////////     **
-//  EXPERIMENTAL CODE WITHOUT BASICS KNOWLENDGE  //     **
-///////////////////////////////////////////////////     **
-const inputOnlyNums = e => {                     //     **
-    const value = e.value;                       //     **
-    e.value = value.replace(/\D/g, '');          //     **
-}                                                //     **
-///////////////////////////////////////////////////     **
-//  EXPERIMENTAL CODE WITHOUT BASICS KNOWLENDGE  //     **
-///////////////////////////////////////////////////     **
-//  ******************************************************
