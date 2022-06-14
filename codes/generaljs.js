@@ -10,7 +10,7 @@ let depositeCoins = 0;  //    Coins for save "every month"
 //
 //  *   Another one strong code moment.
 //  *   REPLACE THIS ALL OUT FROM HERE
-    let payday  =   0;             //   Day of date of general money takes.
+    let payday  =  1;             //   Day of date of general money takes.
     function payDay() {     // EXPERIMENTAL DATE OF PAYDAY
         if (payday > 28) {
             document.getElementById('payday').innerHTML = 'Wrong date. Set day < 28';
@@ -130,65 +130,108 @@ function spendPerDay() {
     document.getElementById('perDay').innerHTML = Math.floor(spendResult);      //  ??? Math.round better ???
 }
 
+
+
+
+
+
+
+
+
+
+
+
+//                                  REWORK THIS |
+//                                              |
+//                                             \|/
+
+
+//
+//
+//          1. Can't devide with 0  !!!
+//          2. We can re-change from 0 by 1
+//
+//
+//
+
+
 function countOfDays() {
     //EXPERIMENTAL CONSOLE CODE
     dateOne = new Date();
     dateTwo = dateOne.setDate(dateOne.getDate() + 30);
-    currentDate = new Date();    
+    currentDate = new Date();
+    resultBeforeDay = currentDate.getDate() + payday;
+    resultAfterDay = Math.abs(currentDate.getDate() - payday);    
     //DO WITH THAT SOMETHING!
     if (payday >= currentDate.getDate()) {
         afterDate();
     } else {
         beforeDate();
     }
-        
 };
 
-function beforeDate() {
+function beforeDate() {  // payday = 7 ; currentDate = 15
     if (dateOne.getDate() === currentDate.getDate()) {
         //	count of days in the current month = 30
-        spendResult = result / (30 - currentDate.getDate() + payday)
-        document.getElementById('leftToPayday').innerHTML = 30 - currentDate.getDate() + payday;
+        daysLeft = 30 - resultBeforeDay
+        spendResult = result / daysLeft
+        document.getElementById('leftToPayday').innerHTML = 30 - resultBeforeDay;
     }
     if (dateOne.getDate() - 2 === currentDate.getDate()) {
         //	count of days in the current month = 28
         spendResult = result / (28 - currentDate.getDate() + payday)
-        document.getElementById('leftToPayday').innerHTML = 28 - currentDate.getDate() + payday;
+        document.getElementById('leftToPayday').innerHTML = 28 - resultBeforeDay;
     }
     if (dateOne.getDate() - 1 === currentDate.getDate()) {
         //	count of days in the current month = 29
         spendResult = result / (29 - currentDate.getDate() + payday)
-        document.getElementById('leftToPayday').innerHTML = 29 - currentDate.getDate() + payday;
+        document.getElementById('leftToPayday').innerHTML = 29 - resultBeforeDay;
     }
     if (dateOne.getDate() > currentDate.getDate()) {
         //	count of days in the current month = 31
         spendResult = result / (31 - currentDate.getDate() + payday)
-        document.getElementById('leftToPayday').innerHTML = 31 - currentDate.getDate() + payday;
+        document.getElementById('leftToPayday').innerHTML = 31 - resultBeforeDay;
     }
 }
 
-function afterDate() {
+function afterDate() {  // payday = 20 ; currentDate = 10
     if (dateOne.getDate() === currentDate.getDate()) {
         //	count of days in the current month = 30
         spendResult = result / (30 - currentDate.getDate() - payday)
-        document.getElementById('leftToPayday').innerHTML = 30 - currentDate.getDate() - payday;
+        document.getElementById('leftToPayday').innerHTML = resultAfterDay;
     }
     if (dateOne.getDate() - 2 === currentDate.getDate()) {
         //	count of days in the current month = 28
         spendResult = result / (28 - currentDate.getDate() - payday)
-        document.getElementById('leftToPayday').innerHTML = 28 - currentDate.getDate() - payday;
+        document.getElementById('leftToPayday').innerHTML = resultAfterDay - 2;
     }
     if (dateOne.getDate() - 1 === currentDate.getDate()) {
         //	count of days in the current month = 29
         spendResult = result / (29 - currentDate.getDate() - payday)
-        document.getElementById('leftToPayday').innerHTML = 29 - currentDate.getDate() - payday;
+        document.getElementById('leftToPayday').innerHTML = resultAfterDay - 1;
     }
     if (dateOne.getDate() > currentDate.getDate()) {
         //	count of days in the current month = 31
         spendResult = result / (31 - currentDate.getDate() - payday)
-        document.getElementById('leftToPayday').innerHTML = 31 - currentDate.getDate() - payday;
+        document.getElementById('leftToPayday').innerHTML = 1 + resultAfterDay;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //  INCOMPREHENSIBLE CODE WITH DATES    //
 //////////////////////////
