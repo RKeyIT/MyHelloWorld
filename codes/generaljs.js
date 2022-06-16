@@ -1,12 +1,9 @@
-//  !!! NEW !!!
-//  SELECTORS   //
-//          const someButton = document.getElementById('#spendButton');
-//  for example... for what?
-
 //  VARIABLES
 let currentCoins = 0;   // general moneys in account
 let depositeCoins = 0;  //    Coins for save "every month"
+let GENERALDATE = new Date()    //  may be will needs later
 
+let result = 0;         //  result of calculating by func's
 //
 //  *   Another one strong code moment.
 //  *   REPLACE THIS ALL OUT FROM HERE
@@ -63,7 +60,7 @@ function addCoins() {
     }
     if(addedCoin.amount === '' || addedCoin.amount === 0) {return 0}
     addedMoneys.push(addedCoin);
-    calculateCurrent();
+    calculateCurrentMoneys();
     spendPerDay();
     document.getElementById('add').value = '';
     document.getElementById('addedFrom').value = '';
@@ -79,7 +76,7 @@ function spendCoins() {
     }
     if(spendedCoin.amount === '' || spendedCoin.amount === 0) {return 0}
     spendedMoneys.push(spendedCoin);
-    calculateCurrent();
+    calculateCurrentMoneys();
     spendPerDay();
     document.getElementById('less').value = '';
     document.getElementById('losedFor').value = '';
@@ -98,33 +95,32 @@ function saveCoins() {
         }
     else {
         depositeMoneys.push(depositeCoins);
-        calculateCurrent();
+        calculateCurrentMoneys();
         spendPerDay();
         document.getElementById('save').value = '';
         return depositeCoins;
     }
 };
 
-function calculateCurrent() {
+function calculateCurrentMoneys() {
     //some code
-    sum = 0;
-    minusSum = 0;
-    result = 0;
+    let sum = 0;
+    let minusSum = 0;
     for (i = 0; i < addedMoneys.length; i++) {
         sum += addedMoneys[i].amount;
     }
     for (i = 0; i < spendedMoneys.length; i++) {
         minusSum += spendedMoneys[i].amount;
     }
-    result = sum - minusSum - depositeCoins;
-    document.getElementById('yourCurrent').innerHTML = result;
+    currentCoins = sum - minusSum - depositeCoins;
+    document.getElementById('yourCurrent').innerHTML = currentCoins;
 }
 
 //////////////////////////
 //  STRONG CODE BLOCK   //
 //////////////////////////
 function spendPerDay() {
-    calculateCurrent();
+    calculateCurrentMoneys();
     countOfDays();
     // EXPERIMENTAL spendResult
     document.getElementById('perDay').innerHTML = Math.floor(spendResult);      //  ??? Math.round better ???
@@ -133,52 +129,53 @@ function spendPerDay() {
 
 
 
+let spendResult = 0;    //  Installed by function   ...     after calculate dates
+let daysInMonth = 0;    //  Installed by function "countOfDays()";
+//  daysInMonth is variable for operations next.    For Example: spendPerDay = result / daysInMonth + 1
+//  (+ 1 is for last day before payday)
 
+function countOfDays() {    //  returns count of days in current month
+    let dateOne = new Date();
+    let dateTwo = dateOne.setDate(dateOne.getDate() + 30); //   optional variable for save changed dateOne variable
+        dateOne = dateOne.getDate();
 
-
-
-
-
-
-
-//                                  REWORK THIS |
-//                                              |
-//                                             \|/
-
-
-//
-//
-//          1. Can't devide with 0  !!!
-//          2. We can re-change from 0 by 1
-//
-//          3. DEVELOP OF NEW FUNCTIONS:
-//
-//
-//
-//
-
-
-
-function countOfDays() {
-    //EXPERIMENTAL CONSOLE CODE
-    dateOne = new Date();
-    dateTwo = dateOne.setDate(dateOne.getDate() + 30);
-    currentDate = new Date();
-
-    resultBeforeDay = currentDate.getDate() + payday;
-    resultAfterDay = 1 + Math.abs(currentDate.getDate() - payday);    
-    
-    //DO WITH THAT SOMETHING!
-    if (payday > currentDate.getDate()) {
-        afterDate();
+        //  GLOBAL VARIABLE WILL BE HERE
+        currentDayOfDate = new Date();  // GLOBAL VARIABLE WITH CYCLIC CALLS
+        currentDayOfDate = currentDayOfDate.getDate();
+        //  GLOBAL VARIABLE WAS HERE
+    /*  END OF VARIABLES    */
+    if (currentDayOfDate === dateOne){
+        daysInMonth = 30
     };
-    if (payday < currentDate.getDate()) {
-        beforeDate();
+    if (currentDayOfDate === dateOne + 1){
+        daysInMonth = 31
     };
-    if (payday === currentDate.getDate()) {
-        equalDates();
-    };
+    if (currentDayOfDate === dateOne - 2){
+        daysInMonth = 28
+    }; 
+    if (currentDayOfDate === dateOne - 1){
+        daysInMonth = 29
+    };  
+    daysLeftToPayday();
 };
+    // ***    BOUNDED FUNCTIONS    ***
+function daysLeftToPayday(){            //  returns count of days before payday
+    let paydayInThisMonth = payday - currentDayOfDate;                  //count of days if payday > currentDayOfDate
+    let paydayInNextMonth = daysInMonth - currentDayOfDate + payday;    //count of days if payday < currentDayOfDate
+
+    if (payday > currentDayOfDate) {    //  for payday = 15; current = 12;
+        spendResult = currentCoins / (paydayInThisMonth + 1);
+        document.getElementById('leftToPayday').innerHTML = paydayInThisMonth;
+    };
+    if (payday < currentDayOfDate) {    //  for payday = 12; current = 15;
+        spendResult = currentCoins / (paydayInThisMonth + 1);
+        document.getElementById('leftToPayday').innerHTML = paydayInNextMonth;
+    };
+    if (payday === currentDayOfDate) {  //  for payday = 15; current = 15;
+        spendResult = currentCoins;
+        document.getElementById('leftToPayday').innerHTML = 0;
+    };
+}
 
 //      One of troubles: 
 //          This code have wrong equal dates if months haves different count of days.
@@ -196,57 +193,6 @@ function countOfDays() {
 
 
 
-
-function equalDates() {     // payday = 10; currentDate = 10
-        spendResult = result
-        document.getElementById('leftToPayday').innerHTML = 0;
-}
-
-function beforeDate() {  // payday = 7 ; currentDate = 15
-    if (dateOne.getDate() === currentDate.getDate()) {
-        //	count of days in the current month = 30
-        spendResult = result / resultBeforeDay
-        document.getElementById('leftToPayday').innerHTML = resultBeforeDay;
-    }
-    if (dateOne.getDate() - 2 === currentDate.getDate()) {
-        //	count of days in the current month = 28
-        spendResult = result / (28 - currentDate.getDate() + payday)
-        document.getElementById('leftToPayday').innerHTML = 28 - resultBeforeDay;
-    }
-    if (dateOne.getDate() - 1 === currentDate.getDate()) {
-        //	count of days in the current month = 29
-        spendResult = result / (29 - currentDate.getDate() + payday)
-        document.getElementById('leftToPayday').innerHTML = 29 - resultBeforeDay;
-    }
-    if (dateOne.getDate() > currentDate.getDate()) {
-        //	count of days in the current month = 31
-        spendResult = result / (31 - currentDate.getDate() + payday)
-        document.getElementById('leftToPayday').innerHTML = 31 - resultBeforeDay;
-    }
-}
-
-function afterDate() {  // payday = 20 ; currentDate = 10
-    if (dateOne.getDate() === currentDate.getDate()) {
-        //	count of days in the current month = 30
-        spendResult = result / (payday - currentDate.getDate() + 1)
-        document.getElementById('leftToPayday').innerHTML = resultAfterDay - 1;
-    }
-    if (dateOne.getDate() - 2 === currentDate.getDate()) {
-        //	count of days in the current month = 28
-        spendResult = result / (28 - currentDate.getDate() - payday)
-        document.getElementById('leftToPayday').innerHTML = resultAfterDay - 2;
-    }
-    if (dateOne.getDate() - 1 === currentDate.getDate()) {
-        //	count of days in the current month = 29
-        spendResult = result / (29 - currentDate.getDate() - payday)
-        document.getElementById('leftToPayday').innerHTML = resultAfterDay - 1;
-    }
-    if (dateOne.getDate() > currentDate.getDate()) {
-        //	count of days in the current month = 31
-        spendResult = result / (31 - currentDate.getDate() - payday)
-        document.getElementById('leftToPayday').innerHTML = 1 + resultAfterDay;
-    }
-}
 
 
 

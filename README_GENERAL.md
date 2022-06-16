@@ -29,6 +29,9 @@ FOR HISTORY:
 lessedMoneys[] **RedColor**
 addedMoneys[] **GreenColor**
 
+Test
+savedMoneys[] **BlueColor**
+
 **Objects**
 
 Elements for history arrays

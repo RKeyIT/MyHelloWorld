@@ -1,20 +1,15 @@
+# MyHelloWorld
+
 
 **Quest 5**
 
     1. HOT re-QUEST**
-            payDay() and payday must be reworked!
-            this is wrong work. 
-
             This must accept only numbers in 1-28
             This can't accept any more than 2 symbols of date.
 
                 ...subs...
             Payday can be installed only in 1-28 or installed on first day of each month.
             if (something) {install on 1-28 values} else {install 1}
-
-            Much values near with currentDate has create wrong input!
-            If currentDate = 13 and payday = 13 function will return 4 days left to payday [ERROR]
-
 
     2.  Was finded bugs with payDay input. If into input place number like 28 and higher
         calculater will be wrong work. It's returns negative number of day lefts to payday.
