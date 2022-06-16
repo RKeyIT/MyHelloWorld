@@ -10,10 +10,10 @@
     <script src="generaljs.js"></script>
     <div class="payday">
         <p>
-            <label for="">Day of PayDay</label><input type="number" min="1" max="28" maxlength="2"
+            <label for="">Day of PayDay</label><input type="text" min="1" max="28" maxlength="2"
                 name="DayOfPayDay" id="payday" placeholder="Your day of PayDay" oninput="inputOnlyNums(this)"
                 value="">
-                <select name="payDay" id="payday">
+                <!-- <select name="payDay" id="payday">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -42,8 +42,8 @@
                     <option value="26">26</option>
                     <option value="27">27</option>
                     <option value="28">28</option>
-                </select>
-            <button type="submit" id="payDayButton" onclick="payDay()">Add day</button>
+                </select> -->
+            <button type="submit" id="payDayButton" onclick="payDay()">Set day</button>
         </p>
     </div>
     <div class="add">

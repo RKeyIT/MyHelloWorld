@@ -9,12 +9,13 @@ let result = 0;         //  result of calculating by func's
 //  *   REPLACE THIS ALL OUT FROM HERE
     let payday  =  1;             //   Day of date of general money takes.
     function payDay() {     // EXPERIMENTAL DATE OF PAYDAY
-        if (payday > 28) {
-            document.getElementById('payday').innerHTML = 'Wrong date. Set day < 28';
+        writtenDay = Number(document.getElementById('payday').value)
+        if (writtenDay <= 28 && writtenDay > 0) {
+            payday = writtenDay;
+            document.getElementById('payday').value = '';   // clear input after accept
         }
-        if (payday <= 28) {
-            payday = Number(document.getElementById('payday').value)
-            document.getElementById('payday').value = '';
+        else {
+            document.getElementById('payday').value = 'Wrong date. Setting first day of month.';
         }
     }
 //  ******************************************************

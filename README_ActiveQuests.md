@@ -16,7 +16,7 @@
 
         !!!
         may be do it like list and fix 1 and 2 quests by one?
-        !!!
+        !!!         this think added to concepts
 
     3.  Input payDay must accept only numbers 1-28
         

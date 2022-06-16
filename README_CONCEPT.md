@@ -14,10 +14,11 @@
 
 <!-- CONCEPTS -->
     Some newest ideas:
-    2. Calendar with all operations.
-    3. Full history on the list and in the calendar.
-    4. Add evening-questions what for was reChanged money balance today.
-    5. Achievments like 1, 3, 5, 10, 15, 30 days without overspends. And another one and another one...
+    1. Calendar with all operations.
+    2. Full history on the list and in the calendar.
+    3. Add evening-questions what for was reChanged money balance today.
+    4. Achievments like 1, 3, 5, 10, 15, 30 days without overspends. And another one and another one...
+    5. Quest 5, part 2: Add list with 1-28 numbers for chosing date of payday.
     6. 
-    7. Create a new World Bank.
-    8. Connect pay card to app and sinchronise data.
+    7. Connect pay card to app and sinchronise data.
+    8. Create a new World Bank.
