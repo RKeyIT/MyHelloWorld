@@ -1,7 +1,15 @@
 # MyHelloWorld
 
+**Quest 6**
 
-**Quest 5**
+    Into app can't be negative numbers. 
+    That's must to safe user against this.
+
+
+
+
+
+<!-- **Quest 5**
 
     1. HOT re-QUEST**
             This must accept only numbers in 1-28
@@ -25,10 +33,7 @@
                 May be payDay input didn't need?
                 We can use first day of each month for that.
 
-        2.2     App must accept only correct days!
-
-    4.  Into app can't be negative numbers. 
-        That's must to safe user against this.
+        2.2     App must accept only correct days! -->
 
 
 <!-- **Qest 4**

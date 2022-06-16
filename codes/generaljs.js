@@ -15,8 +15,10 @@ let result = 0;         //  result of calculating by func's
             document.getElementById('payday').value = '';   // clear input after accept
         }
         else {
-            document.getElementById('payday').value = 'Wrong date. Setting first day of month.';
+            alert('Wrong date. Set was first day of month.');
+            document.getElementById('payday').value = '';
         }
+        document.getElementById('everyPayday').innerHTML = payday;
     }
 //  ******************************************************
 ///////////////////////////////////////////////////     **
@@ -169,7 +171,7 @@ function daysLeftToPayday(){            //  returns count of days before payday
         document.getElementById('leftToPayday').innerHTML = paydayInThisMonth;
     };
     if (payday < currentDayOfDate) {    //  for payday = 12; current = 15;
-        spendResult = currentCoins / (paydayInThisMonth + 1);
+        spendResult = currentCoins / (paydayInNextMonth + 1);
         document.getElementById('leftToPayday').innerHTML = paydayInNextMonth;
     };
     if (payday === currentDayOfDate) {  //  for payday = 15; current = 15;
