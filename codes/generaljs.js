@@ -1,9 +1,9 @@
 //  VARIABLES
 let currentCoins = 0;   // general moneys in account
 let depositeCoins = 0;  //    Coins for save "every month"
-let GENERALDATE = new Date()    //  may be will needs later
+let GENERALDATE = new Date()    //  may be will needs later;    haven't sence now!
 
-let result = 0;         //  result of calculating by func's
+let result = 0;         //  result of calculating by func's;    haven't sense now!
 //
 //  *   Another one strong code moment.
 //  *   REPLACE THIS ALL OUT FROM HERE
@@ -15,8 +15,8 @@ let result = 0;         //  result of calculating by func's
             document.getElementById('payday').value = '';   // clear input after accept
         }
         else {
-            alert('Wrong date. Set was first day of month.');
-            document.getElementById('payday').value = '';
+            alert('Wrong date. 1st day has been setted.');
+            document.getElementById('payday').value = '';   //  alert and after - clear input
         }
         document.getElementById('everyPayday').innerHTML = payday;
     }
@@ -61,7 +61,7 @@ function addCoins() {
         color: 'green',
         date: new Date(),
     }
-    if(addedCoin.amount === '' || addedCoin.amount === 0) {return 0}
+    if(addedCoin.amount === '' || addedCoin.amount <= 0) {return 0}
     addedMoneys.push(addedCoin);
     calculateCurrentMoneys();
     spendPerDay();

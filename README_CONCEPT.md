@@ -10,7 +10,8 @@
   1) Overspends
   2) Bankrot
   3) 
-4.  
+4.  Into app can't be negative numbers. 
+    That's must to safe user against this.
 
 <!-- CONCEPTS -->
     Some newest ideas:
