@@ -2,7 +2,27 @@
 
 **Quest 6**
 
+    Re-work coin system.
+        1) Add class for coins.
 
+            coin = {
+                this.comment: comment,
+                this.color: color,
+                this.amount: amount,
+                this.date: new Date(),
+            }
+
+
+        2) Add one array for save all of coins
+
+            allCoins = [coin, coin, coin]
+            console.log(allCoins[1])
+
+        
+        3) Some steps for clear code.
+
+            coin and all of this in first place,
+            dates in secons...
 
 
 
