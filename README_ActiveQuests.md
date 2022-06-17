@@ -2,8 +2,7 @@
 
 **Quest 6**
 
-    Into app can't be negative numbers. 
-    That's must to safe user against this.
+
 
 
 

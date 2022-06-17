@@ -17,11 +17,11 @@
     </div>
     <div class="add">
         <p>    <!--  For add coins page -->
-            <label>Add coins<input type="text" id="add" placeholder="Some number"
+            <label>Contribute coins<input type="text" id="add" placeholder="+moneys"
                 oninput="inputOnlyNums(this)"></label>
         </p>
         <p>
-            <label>From what you added?<input type="text" id="addedFrom" placeholder="Reason"></label>
+            <label>From what you added?<input type="text" id="addedFrom" placeholder="Contributed from..."></label>
         </p>
         <p>
             <button type="submit" id="addButton" onclick="addCoins()">Add</button>
@@ -29,20 +29,20 @@
     </div>
     <div class="lose">
         <p>     <!--  For lose coins page -->
-            <label>Lose coins<input type="text" id="less" placeholder="Some number"
+            <label>Spend coins<input type="text" id="less" placeholder="-moneys"
                 oninput="inputOnlyNums(this)"></label>
         </p>
         <p>
-            <label>For what your want lose moneys?<input type="text" id="losedFor" placeholder="Reason"></label>
+            <label>For what your want to spend your moneys?<input type="text" id="losedFor" placeholder="Spended for..."></label>
         </p>
         <p>
-            <button type="submit" id="loseButton" onclick="spendCoins()">Lose</button>
+            <button type="submit" id="loseButton" onclick="spendCoins()">Spend</button>
         </p>
     </div>
     <div class="save">
         <p>     <!--  For lose coins page -->
             <label>What count of coins you want to save?<input type="text" id="save"
-                oninput="inputOnlyNums(this)" placeholder="Some number"></label>
+                oninput="inputOnlyNums(this)" placeholder="amount of saved coins"></label>
         </p>
         <p>
             <button type="submit" id="saveButton" onclick="saveCoins()">Save</button>
@@ -60,7 +60,8 @@
         <p>
             <label for="perDay">You can to spend <span id="perDay">0</span> coins today.
             <br>
-            <span id="leftToPayday">0</span> days left to payday.
+            <span id="leftToPayday">0</span>
+            <span id="dayLeft">days</span> left to payday.
             </label>
         </p>
         <p>

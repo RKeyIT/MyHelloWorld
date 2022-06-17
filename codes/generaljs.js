@@ -166,6 +166,23 @@ function daysLeftToPayday(){            //  returns count of days before payday
     let paydayInThisMonth = payday - currentDayOfDate;                  //count of days if payday > currentDayOfDate
     let paydayInNextMonth = daysInMonth - currentDayOfDate + payday;    //count of days if payday < currentDayOfDate
 
+    if (payday === 1) {
+        document.getElementById('dayLeft').innerHTML = 'day';
+    } else {
+        document.getElementById('dayLeft').innerHTML = 'days';
+    };
+
+    if (payday === 0) {
+        document.getElementById('postfix').innerHTML = ' ';
+    } else if (payday === 1) {
+        document.getElementById('postfix').innerHTML = `st`
+    } else if (payday === 2) {
+        document.getElementById('postfix').innerHTML = `nd`
+    } else if (payday > 3) {
+        document.getElementById('postfix').innerHTML = `th`
+    }
+
+
     if (payday > currentDayOfDate) {    //  for payday = 15; current = 12;
         spendResult = currentCoins / (paydayInThisMonth + 1);
         document.getElementById('leftToPayday').innerHTML = paydayInThisMonth;
