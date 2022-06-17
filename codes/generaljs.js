@@ -172,15 +172,15 @@ function daysLeftToPayday(){            //  returns count of days before payday
         document.getElementById('dayLeft').innerHTML = 'days';
     };
 
-    if (payday === 0) {
-        document.getElementById('postfix').innerHTML = ' ';
-    } else if (payday === 1) {
-        document.getElementById('postfix').innerHTML = `st`
-    } else if (payday === 2) {
-        document.getElementById('postfix').innerHTML = `nd`
-    } else if (payday > 3) {
-        document.getElementById('postfix').innerHTML = `th`
-    }
+    // if (payday === 0) {
+    //     document.getElementById('postfix').innerHTML = ' ';
+    // } else if (payday === 1) {
+    //     document.getElementById('postfix').innerHTML = `st`
+    // } else if (payday === 2) {
+    //     document.getElementById('postfix').innerHTML = `nd`
+    // } else if (payday > 3) {
+    //     document.getElementById('postfix').innerHTML = `th`
+    // }
 
 
     if (payday > currentDayOfDate) {    //  for payday = 15; current = 12;
@@ -197,28 +197,11 @@ function daysLeftToPayday(){            //  returns count of days before payday
     };
 }
 
-//      One of troubles: 
-//          This code have wrong equal dates if months haves different count of days.
-//
-//      That's can be like that in this stage. Needs update later.
-//      
-//
-//
-//      List of answers for this functions:
-//          1)  That's must calculate with monthes with same count of dates.
-//          2)  That's must calculate with monthes with different count of dates.
-//          3)  Good returns by function equalDates()
-//          4)  
-
-
-
-
-
-
-
-
-//  INCOMPREHENSIBLE CODE WITH DATES    //
-//////////////////////////
-//STRONG CODE BLOCK ENDS//
-//////////////////////////
-
+// class Coin {
+//     constructor(comment, color, amount) {
+//         this.comment: document.getElementById('losedFor').value,
+//         this.amount: Number(document.getElementById("less").value),
+//         this.color: 'red',
+//         this.date: new Date(),
+//     }
+// }
