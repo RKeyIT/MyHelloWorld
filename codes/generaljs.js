@@ -16,6 +16,7 @@ let result = 0;         //  result of calculating by func's;    haven't sense no
         }
         else {
             alert('Wrong date. 1st day has been setted.');
+            payday = 1;
             document.getElementById('payday').value = '';   //  alert and after - clear input
         }
         document.getElementById('everyPayday').innerHTML = payday;
@@ -35,10 +36,6 @@ const inputOnlyNums = e => {                     //     **
 ///////////////////////////////////////////////////     **
 //  ******************************************************
 
-//  *   This is basic date.
-//  *   Application must take this date installed by user 
-//  *   For do all calculate operations based on this day.
-//
 
 //  ARRAYS
 let addedMoneys = [];   //  green values
@@ -109,13 +106,17 @@ function calculateCurrentMoneys() {
     //some code
     let sum = 0;
     let minusSum = 0;
+    let depositeSum = 0;
     for (i = 0; i < addedMoneys.length; i++) {
         sum += addedMoneys[i].amount;
     }
     for (i = 0; i < spendedMoneys.length; i++) {
         minusSum += spendedMoneys[i].amount;
     }
-    currentCoins = sum - minusSum - depositeCoins;
+    for (i = 0; i < depositeMoneys.length; i++) {
+        depositeSum += depositeMoneys[i];
+    }
+    currentCoins = sum - minusSum - depositeSum;
     document.getElementById('yourCurrent').innerHTML = currentCoins;
 }
 
@@ -128,8 +129,6 @@ function spendPerDay() {
     // EXPERIMENTAL spendResult
     document.getElementById('perDay').innerHTML = Math.floor(spendResult);      //  ??? Math.round better ???
 }
-
-
 
 
 let spendResult = 0;    //  Installed by function   ...     after calculate dates
@@ -205,3 +204,71 @@ function daysLeftToPayday(){            //  returns count of days before payday
 //         this.date: new Date(),
 //     }
 // }
+
+
+//************************************************************************************
+//**************************NEW VERSION OF COINS**************************************
+//************************************************************************************
+
+class Coin {
+    constructor(options){
+        this.amount = options.amount;
+        this.comment = options.comment;
+        this.date = new Date();
+    }
+    take(){
+        this.color = 'green'
+    }
+    spend(){
+        this.color = 'red'
+    }
+    save(){
+        this.color = 'blue'
+    }
+}
+
+let fullCoinArray = []
+
+function takeCoin() {
+    let coin = new Coin ({
+        amount: 300,
+        comment: 'fds',
+    })
+    coin.take();
+    fullCoinArray.push(coin);
+}
+
+takeCoin();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
