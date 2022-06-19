@@ -1,6 +1,14 @@
 # MyHelloWorld
 
-**Quest 6**
+**Quest 7**
+
+
+
+
+
+
+
+<!-- **Quest 6**
 
     Re-work coin system.
         1) Add class for coins.
@@ -22,7 +30,7 @@
         3) Some steps for clear code.
 
             coin and all of this in first place,
-            dates in secons...
+            dates in secons... -->
 
 
 
