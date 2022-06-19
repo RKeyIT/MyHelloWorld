@@ -1,3 +1,18 @@
+//  ******************************************************
+///////////////////////////////////////////////////     **
+//  EXPERIMENTAL CODE WITHOUT BASICS KNOWLENDGE  //     **
+//  THIS IS ACCEPT ONLY NUMS IN SOME INMPUTS    ///     **
+const inputOnlyNums = e => {                     //     **
+    const value = e.value;                       //     **
+    if (e.value <= 28) {                         //     **
+        e.value = value.replace(/\D/g, '');      //     **
+    };                                           //     **
+}                                                //     **
+///////////////////////////////////////////////////     **
+//  EXPERIMENTAL CODE WITHOUT BASICS KNOWLENDGE  //     **
+///////////////////////////////////////////////////     **
+//  ******************************************************
+
 //  VARIABLES
 let currentCoins = 0;   // general moneys in account
 let depositeCoins = 0;  //    Coins for save
@@ -27,12 +42,36 @@ function payDay() {     // SET DATE OF PAYDAY
 // HERE PLACED CODE BLOCK FOR CLASS 'Coin' AND BOUNDED FUNCTIONS
 const MONEYS = []   // array with objects *coin*
 let coin;           // always new object from class Coin  
-
-
+class Coin {        // Class and after this functions for this class
+    constructor(){
+        this.date = new Date();
+    }
+    take(){
+        this.amount = Number(document.getElementById('add').value),
+        this.comment = document.getElementById('addedFrom').value,
+        this.color = 'green';
+        MONEYS.push(coin)
+    }
+    spend(){
+        this.amount = Number(document.getElementById("less").value),
+        this.comment = document.getElementById('losedFor').value,
+        this.color = 'red';
+        MONEYS.push(coin)
+    }
+    save(){
+        this.amount = Number(document.getElementById('save').value),
+        this.comment = document.getElementById('saveFor').value,
+        this.color = 'blue';
+        MONEYS.push(coin)
+    }
+}
 //Operative functions with this class
 function takeCoin() {
-    if (document.getElementById('add').value === '' || 
-        document.getElementById('add').value === 0 ) {return}
+    if (
+        document.getElementById('add').value === ''
+        || document.getElementById('add').value <= 0 
+        || document.getElementById('add').value !== Number
+        ) {return}
     else {
     coin = new Coin()
     coin.take();
@@ -44,7 +83,8 @@ function takeCoin() {
 }
 function spendCoin() {
     if (document.getElementById('less').value === '' || 
-        document.getElementById('less').value === 0 ) {return}
+        document.getElementById('less').value !== Number || 
+        document.getElementById('less').value <= 0 ) {return}
     else {
     coin = new Coin ()
     coin.spend();
@@ -55,8 +95,9 @@ function spendCoin() {
     }
 }
 function saveCoin() {
-    if (document.getElementById('save').value === '' || 
-        document.getElementById('save').value === 0 ) {return}
+    if (document.getElementById('save').value === '' ||
+        document.getElementById('save').value !== Number || 
+        document.getElementById('save').value <= 0 ) {return}
     else {
     coin = new Coin ()
     coin.save();
@@ -137,40 +178,3 @@ function daysLeftToPayday(){            //  returns count of days before payday
 // END OF BLOCK WITH DATES AND BOUNDED FUNCTIONS
 
 
-//  ******************************************************
-///////////////////////////////////////////////////     **
-//  EXPERIMENTAL CODE WITHOUT BASICS KNOWLENDGE  //     **
-//  THIS IS ACCEPT ONLY NUMS IN SOME INMPUTS    ///     **
-const inputOnlyNums = e => {                     //     **
-    const value = e.value;                       //     **
-    if (e.value <= 28) {                         //     **
-        e.value = value.replace(/\D/g, '');      //     **
-    };                                           //     **
-}                                                //     **
-///////////////////////////////////////////////////     **
-//  EXPERIMENTAL CODE WITHOUT BASICS KNOWLENDGE  //     **
-///////////////////////////////////////////////////     **
-//  ******************************************************
-class Coin {        // Class and after this functions for this class
-    constructor(){
-        this.date = new Date();
-    }
-    take(){
-        this.amount = Number(document.getElementById('add').value),
-        this.comment = document.getElementById('addedFrom').value,
-        this.color = 'green';
-        MONEYS.push(coin)
-    }
-    spend(){
-        this.amount = Number(document.getElementById("less").value),
-        this.comment = document.getElementById('losedFor').value,
-        this.color = 'red';
-        MONEYS.push(coin)
-    }
-    save(){
-        this.amount = Number(document.getElementById('save').value),
-        this.comment = document.getElementById('saveFor').value,
-        this.color = 'blue';
-        MONEYS.push(coin)
-    }
-}
