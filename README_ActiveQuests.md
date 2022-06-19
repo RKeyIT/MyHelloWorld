@@ -1,8 +1,19 @@
 # MyHelloWorld
 
+**Quest 8**
+
+    1. Create visual calendar model with.
+    2. Add functions to assign dates to operations.
+    3. Add first styles. For days with some operations.
+
+
+
+
+
+
 **Quest 7**
 
-
+    In MONEYS array must not be negative or 0 numbers.
 
 
 
