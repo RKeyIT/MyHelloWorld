@@ -8,17 +8,20 @@
 </head>
 <body>
     <script src="generaljs.js"></script>
-    <!-- <div class="payday">
-        <p>
+    <div class="payday">
+        <p>    <!--    here is something wrong     -->
+                <!-- sometimes console returns ATTANTION "can't get element cause its null"-->
             <label for="">Day of PayDay</label><input type="text" min="1" max="28" maxlength="2"
-                name="DayOfPayDay" id="payday" placeholder="Your day of PayDay" oninput="inputOnlyNums(this)">
+                name="DayOfPayDay" id="payday" placeholder="1-28 numbers"
+                oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');">
             <button type="submit" id="payDayButton" onclick="payDay()">Set day</button>
+            <!--    wrong code ends     -->
         </p>
-    </div> -->
+    </div>
     <div class="add">
         <p>    <!--  ADD COINS -->
             <label>Contribute coins<input type="text" id="add" placeholder="+moneys"
-                oninput="inputOnlyNums(this)"></label>
+                oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');"></label>
         </p>
         <p>
             <label>From what you added?</label><input type="text" id="addedFrom" placeholder="Contributed from...">
@@ -30,7 +33,7 @@
     <div class="lose">
         <p>     <!--  SPEND COINS    -->
             <label>Spend coins<input type="text" id="less" placeholder="-moneys"
-                oninput="inputOnlyNums(this)"></label>
+                oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');"></label>
         </p>
         <p>
             <label>For what your want to spend your moneys?</label><input type="text" id="losedFor" placeholder="Spended for...">
@@ -42,11 +45,12 @@
     <div class="save">
         <p>     <!--  SAVE COINS -->
             <label>What count of coins you want to save?</label><input type="text" id="save"
-            oninput="inputOnlyNums(this)" placeholder="amount of saved coins">
+            oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');"
+            placeholder="amount of saved coins">
         </p>
         <p>
             <label for="saveFor">Comment:</label><input type="text" id="saveFor"
-            placeholder="amount of saved coins">
+            placeholder="for what? :)">
         </p>
         <p>
             <button type="submit" id="saveButton" onclick="saveCoin()">Save</button>

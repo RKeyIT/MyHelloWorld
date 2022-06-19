@@ -1,18 +1,3 @@
-//  ******************************************************
-///////////////////////////////////////////////////     **
-//  EXPERIMENTAL CODE WITHOUT BASICS KNOWLENDGE  //     **
-//  THIS IS ACCEPT ONLY NUMS IN SOME INMPUTS    ///     **
-const inputOnlyNums = e => {                     //     **
-    const value = e.value;                       //     **
-    if (e.value <= 28) {                         //     **
-        e.value = value.replace(/\D/g, '');      //     **
-    };                                           //     **
-}                                                //     **
-///////////////////////////////////////////////////     **
-//  EXPERIMENTAL CODE WITHOUT BASICS KNOWLENDGE  //     **
-///////////////////////////////////////////////////     **
-//  ******************************************************
-
 //  VARIABLES
 let currentCoins = 0;   // general moneys in account
 let depositeCoins = 0;  //    Coins for save
@@ -36,6 +21,8 @@ function payDay() {     // SET DATE OF PAYDAY
         document.getElementById('payday').value = '';   //  alert and after - clear input
     }
     document.getElementById('everyPayday').innerHTML = payday;
+    calculateCurrentMoneys();
+    spendPerDay();
 }
 
 
@@ -68,9 +55,10 @@ class Coin {        // Class and after this functions for this class
 //Operative functions with this class
 function takeCoin() {
     if (
-        document.getElementById('add').value === ''
-        || document.getElementById('add').value <= 0 
-        || document.getElementById('add').value !== Number
+        document.getElementById('add').value === '' || 
+        Number(document.getElementById('add').value) !== 
+        Number(document.getElementById('add').value) || 
+        document.getElementById('add').value <= 0
         ) {return}
     else {
     coin = new Coin()
@@ -83,7 +71,6 @@ function takeCoin() {
 }
 function spendCoin() {
     if (document.getElementById('less').value === '' || 
-        document.getElementById('less').value !== Number || 
         document.getElementById('less').value <= 0 ) {return}
     else {
     coin = new Coin ()
@@ -96,7 +83,6 @@ function spendCoin() {
 }
 function saveCoin() {
     if (document.getElementById('save').value === '' ||
-        document.getElementById('save').value !== Number || 
         document.getElementById('save').value <= 0 ) {return}
     else {
     coin = new Coin ()
