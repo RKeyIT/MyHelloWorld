@@ -13,7 +13,8 @@
 
 **Quest 7**
 
-    In MONEYS array must not be negative or 0 numbers.
+    1) In MONEYS array must not be negative or 0 numbers.
+    2) FIX THIS NULL STRING.... ATANTION!
 
 
 
