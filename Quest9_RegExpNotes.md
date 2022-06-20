@@ -25,6 +25,7 @@ $   = end of string$. Last symbol of any string.
         7) \W - any exclusive letters.
         8) \b - separations of word. Example: 'word' will be finded by \b\w\w\w\w\b (without 'space's)
         9) \B - places into words (expressions). Like: e|x|a|m|p|l|e places without spaces and separators
+        10) 
 
 (number) = quantification. Count of repeats for any special symbol.
     Examples: \b\w(3)\b s(5)    OR      N(3,7) will find NNN, NNNN, NNNNN, NNNNNN, NNNNNNN  OR  N(1) will find only N

@@ -1,9 +1,9 @@
 # MyHelloWorld
 
-**Quest 9**
+<!-- **Quest 9**
 
     1. Learn regular expressions. (this is already into code in index.html with ids = 'add', 'less' and other...).
-    2. Enter some regular expression into code by myself
+    2. Enter some regular expression into code by myself -->
 
 
 
@@ -15,6 +15,7 @@
     1. Create visual calendar model with.
     2. Add functions to assign dates to operations.
     3. Add first styles. For days with some operations.
+    4. Create list with operations in "day". This must show what was does in this date
 
 
 
