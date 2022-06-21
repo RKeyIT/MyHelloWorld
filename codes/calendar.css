@@ -1,0 +1,24 @@
+.calendar{
+    background-color: beige;
+    /* grid-template-rows: repeat(6, 1fr); */
+    
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas: 
+    "square"
+    ;
+    grid-gap: 5px;
+    justify-items: center;
+}
+.line {
+
+}
+.dayOff {
+    color: brown;
+}
+.square{
+    grid-area: square;
+    outline: 1px black solid;
+    outline-offset: -1px;
+}

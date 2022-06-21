@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SaveYourMoney</title>
+    <link rel="stylesheet" href="calendar.css">
 </head>
 <body>
     <script src="generaljs.js"></script>
@@ -63,21 +64,89 @@
     <div class="currentMoneys">
         <p>
             <label for="current">Current coins
-                <span id="yourCurrent"></span>
+                <div id="yourCurrent"></div>
             </label>
         </p>
     </div>
     <div class="perDay">
         <p>
-            <label for="perDay">You can to spend <span id="perDay">0</span> coins today.
+            <label for="perDay">You can to spend <div id="perDay">0</div> coins today.
             <br>
-            <span id="leftToPayday">0</span>
-            <span id="dayLeft">days</span> left to payday.
+            <div id="leftToPayday">0</div>
+            <div id="dayLeft">days</div> left to payday.
             </label>
         </p>
         <p>
-            <label for="everyPayday">Payday setted every <span id="everyPayday">1</span> day of month</label>
+            <label for="everyPayday">Payday setted every <div id="everyPayday">1</div> day of month</label>
         </p>
+    </div>
+
+
+
+
+
+
+    <div class="calendar">
+        <div class="line">
+            <div class="square amountOfWeek"></div>
+            <div class="square dayOfWeek">Mon</div>
+            <div class="square dayOfWeek">Tue</div>
+            <div class="square dayOfWeek">Wed</div>
+            <div class="square dayOfWeek">Thu</div>
+            <div class="square dayOfWeek">Fri</div>
+            <div class="square dayOff">Sat</div>
+            <div class="square dayOff">Sun</div>
+        </div>
+        <div class="line">
+            <div class="square amountOfWeek">50</div>
+            <div class="square">1</div>
+            <div class="square">1</div>
+            <div class="square">1</div>
+            <div class="square">1</div>
+            <div class="square">1</div>
+            <div class="square dayOff">1</div>
+            <div class="square dayOff">1</div>
+        </div>
+        <div class="line">
+            <div class="square amountOfWeek">50</div>
+            <div class="square">1</div>
+            <div class="square">1</div>
+            <div class="square">1</div>
+            <div class="square">1</div>
+            <div class="square">1</div>
+            <div class="square dayOff">1</div>
+            <div class="square dayOff">1</div>
+        </div>
+        <div class="line">
+            <div class="square amountOfWeek">50</div>
+            <div class="square">1</div>
+            <div class="square">1</div>
+            <div class="square">1</div>
+            <div class="square">1</div>
+            <div class="square">1</div>
+            <div class="square dayOff">1</div>
+            <div class="square dayOff">1</div>
+        </div>
+        <div class="line">
+            <div class="square amountOfWeek">50</div>
+            <div class="square">1</div>
+            <div class="square">1</div>
+            <div class="square">1</div>
+            <div class="square">1</div>
+            <div class="square">1</div>
+            <div class="square dayOff">1</div>
+            <div class="square dayOff">1</div>
+        </div>
+        <div class="line">
+            <div class="square amountOfWeek">50</div>
+            <div class="square">1</div>
+            <div class="square">1</div>
+            <div class="square">1</div>
+            <div class="square">1</div>
+            <div class="square">1</div>
+            <div class="square dayOff">1</div>
+            <div class="square dayOff">1</div>
+        </div>
     </div>
 </body>
 </html>
