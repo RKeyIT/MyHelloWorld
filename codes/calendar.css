@@ -1,33 +1,46 @@
 .wrapper {
-    background-color: black;
-    color: whitesmoke;
+    background-color: rgb(31, 31, 31);
     margin: 50px auto;
-    width: 500px;
-    height: 400px;
+    width: 18vw;
+    height: 27vh;
     border-radius: 20px;
-    padding: 20px;
+    padding: 10px;
 }
-.square {
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    justify-items: center;
+}
+
+.square/*, .date*/{ 
     width: 30px;
     height: 30px;
-    background-color: #222;
+    border-radius: 25%;
+    background-color: rgb(199, 194, 194);
     text-align: center;
     line-height: 30px;
     cursor: pointer;
     user-select: none;
+    margin: 1px auto;
 }
 .square:hover {
     filter: brightness(75%);
 }
 
-.calendar {
-    display: grid;
-    grid-template-areas: 
-    "square" "square" "square" "square" "square" "square" "square" "square"
-    "square" "square" "square" "square" "square" "square" "square" "square"
-    "square" "square" "square" "square" "square" "square" "square" "square"
-    "square" "square" "square" "square" "square" "square" "square" "square"
-    "square" "square" "square" "square" "square" "square" "square" "square"
-    "square" "square" "square" "square" "square" "square" "square" "square";
-    justify-items: center;
+.amountOfWeek {
+    background-color: rgb(55, 55, 81);
+}
+.dayOfWeek {
+    background: rgb(81, 126, 118);
+}
+.dayOffs {
+    background: rgb(100, 66, 72);
+}
+.dayOff {
+    color: rgb(94, 41, 41);
+    background: rgb(167, 164, 164);
+}
+.nullPoint {
+    filter: brightness(0%);
 }
