@@ -1,8 +1,31 @@
-let pastTime = new Date(2022, 5, 1);   //  variable for write "first date"
-let formatedDate
-formateDate()
+let pastTime = new Date(2022, 5, 1);   //  variable for write "first date" is when i begining this code
+let formatedDate    // variable for show current formate of date
+let currentDayOfDate = new Date().getDate();  // current date of date
+let daysInMonth;                // count of days in current month
+let firstDayOfCurrentMonth;     // monday or friday today?
 
-function formateDate() {
+
+
+formateDate()
+countOfDays()                   //  count of days in current month
+
+let dateArray = [0];
+
+fillDateArray()
+function fillDateArray() {
+    let numberOfDay = 1;
+    for(i = 1; i <= daysInMonth; i++){
+        dateArray.push(numberOfDay);
+        numberOfDay++;
+    }
+}
+
+dayOfWeek()                     //  monday or friday today?
+buildCalendar()                 //  calendar sets
+
+
+
+function formateDate() {                //  func for formatedDate  
     let dd = pastTime.getDate();
     let mm = pastTime.getMonth();
     let yyyy = pastTime.getFullYear();
@@ -16,10 +39,8 @@ function formateDate() {
 
     formatedDate = `${dd} ${mm} ${yyyy}`;
     document.getElementById('fullDate').innerHTML = formatedDate;
-}
+};
 
-let daysInMonth;
-let firstDayOfCurrentMonth;
 
 function countOfDays() {    //  returns count of days in current month
     let dateOne = new Date();
@@ -39,46 +60,31 @@ function countOfDays() {    //  returns count of days in current month
         daysInMonth = 29
     };  
 }
-
-function dayOfWeek() {
+function dayOfWeek() {      // what is the day of week of current or new Month? Friday?
     let date1 = new Date().getFullYear();
     let date2 = new Date().getMonth();
     firstDayOfCurrentMonth = new Date(date1, date2, 1)
 }
 
 function buildCalendar () {
-    let firstDayPoint = 'd'+firstDayOfCurrentMonth.getDay()
-        /** THIS IS THE FIRST WAY  **/
-        setCalendar()
-        function setCalendar(firstDayPoint) {
-        // build from firstDayPoint
+    eq = 1;
+    for(i = 1; i < dateArray.length; i++){
+        let numOfDay = 'd'+(firstDayOfCurrentMonth.getDay() - 1 + i)
+        document.getElementById(numOfDay).innerHTML = i;
+        eq++
+    };
 
-
-        //experimental
-        document.getElementById(`${firstDayPoint}`).innerHTML = 1;
+    let date0 = new Date();
+    let date1 = new Date(date0.getFullYear(), date0.getMonth(), 0);
+    let x = date1.getDate();    
+    for(i = firstDayOfCurrentMonth.getDay(); i > 1; i--) {
+        let numOfDay = 'd'+(i - 1);
+        document.getElementById(numOfDay).innerHTML = x--;
+        eq++
     }
-
-        /** THIS IS THE SECOND WAY **/
-    /************   BUILD CALCULATOR FROM THIS IF's  ************/
-    if(firstDayPoint = 1) {     //  Monday
-
+    let f = 1
+    for(i = eq; i <= 35; i++) {
+        document.getElementById('d'+i).innerHTML = f++;
     }
-    if(firstDayPoint = 2) {     //  Tuesday
-        
-    }
-    if(firstDayPoint = 3) {     //  Wednesday
-        
-    }
-    if(firstDayPoint = 4) {     //  Thursday
-        
-    }
-    if(firstDayPoint = 5) {     //  Friday
-        
-    }
-    if(firstDayPoint = 6) {     //  Saturday
-        
-    }
-    if(firstDayPoint = 0) {     //  Sunday
-        
-    }
+    //build from firstDayPoint
 }
