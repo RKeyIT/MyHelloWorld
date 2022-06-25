@@ -6,7 +6,7 @@ let currentTime = new Date(currentYear, currentMonth, 1);   //  variable for wri
 
 let formatedDate    // variable for show current formate of date
 let currentDayOfDate = new Date().getDate();  // current date of date
-let daysInMonth;                // count of days in current month
+let daysInMonth = 30;                // count of days in current month
 let firstDayOfCurrentMonth;     // monday or friday today?
 
 
@@ -51,22 +51,44 @@ function formateDate() {                //  func for formatedDate
 
 
 function countOfDays() {    //  returns count of days in current month
+
+    // let d1 = currentTime.getFullYear()
+    // let d2 = currentTime.getMonth()
+    // let d3 = currentTime.getDate() + 30
+    // let dateOne = new Date(d1, d2, 31)
     let dateOne = new Date();
     let dateTwo = dateOne.setDate(dateOne.getDate() + 30); //   optional variable for save changed dateOne variable
         dateOne = dateOne.getDate();
-
-    if (currentTime === dateOne){
+        dateTwo = currentTime.getDate()
+    if (dateTwo === dateOne){
         daysInMonth = 30
     };
-    if (currentTime === dateOne + 1){
+    if (dateTwo === dateOne + 1){
         daysInMonth = 31
     };
-    if (currentTime === dateOne - 2){
+    if (dateTwo === dateOne - 2){
         daysInMonth = 28
     }; 
-    if (currentTime === dateOne - 1){
+    if (dateTwo === dateOne - 1){
         daysInMonth = 29
     };  
+    //     //  GLOBAL VARIABLE WILL BE HERE
+    //     currentDayOfDate = new Date();  // GLOBAL VARIABLE WITH CYCLIC CALLS
+    //     currentDayOfDate = currentDayOfDate.getDate();
+    //     //  GLOBAL VARIABLE WAS HERE
+
+    // if (currentDayOfDate === dateOne){
+    //     daysInMonth = 30
+    // };
+    // if (currentDayOfDate === dateOne + 1){
+    //     daysInMonth = 31
+    // };
+    // if (currentDayOfDate === dateOne - 2){
+    //     daysInMonth = 28
+    // }; 
+    // if (currentDayOfDate === dateOne - 1){
+    //     daysInMonth = 29
+    // };  
 }
 function dayOfWeek() {      // what is the day of week of current or new Month? Friday?
     let date1 = currentTime.getFullYear();
@@ -85,13 +107,13 @@ function buildCalendar() {
     let date0 = new Date();
     let date1 = new Date(date0.getFullYear(), date0.getMonth(), 0);
     let prevMonthShadow = date1.getDate();    
-    for(i = firstDayOfCurrentMonth.getDay(); i > 1; i--) {
-        let numOfDay = 'd'+(i - 1);
+    for(i = firstDayOfCurrentMonth.getDay() - 1; i > 1; i--) {
+        let numOfDay = 'd'+i;
         document.getElementById(numOfDay).innerHTML = prevMonthShadow--;
         eq++
     }
     let nextMonthShadow = 1
-    for(i = eq; i <= 35; i++) {
+    for(i = eq; i <= 42; i++) {
         document.getElementById('d'+i).innerHTML = nextMonthShadow++;
     }
     //build from firstDayPoint
@@ -101,20 +123,20 @@ function buildCalendar() {
 function generatePrevMonth() {
     currentMonth--;
     currentTime = new Date(currentYear, currentMonth, 1)
-    formateDate();
-    countOfDays();
-    dayOfWeek();
-    fillDateArray();
-    buildCalendar()
+    fullRecall()
 }
 function generateNextMonth() {
     currentMonth++;
     currentTime = new Date(currentYear, currentMonth, 1)
-    formateDate();
-    countOfDays();
-    dayOfWeek();
-    fillDateArray();
-    buildCalendar()
+    fullRecall()
+}
+
+function fullRecall() {
+    formateDate();      // 1.
+    countOfDays();      // 2.
+    dayOfWeek();        // 3.
+    fillDateArray();    // 4.
+    buildCalendar();    // 5.
 }
 
 /*
