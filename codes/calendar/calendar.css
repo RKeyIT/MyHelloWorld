@@ -29,6 +29,8 @@
 }
 
 .date {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
     background-color: rgb(199, 194, 194);
     border-radius: 10%;
     text-align: center;
@@ -46,4 +48,10 @@
 }
 .nullPoint {
     filter: brightness(0%);
+}
+
+.arrow, #fullDate{
+    color: rgb(94, 41, 41);
+    user-select: none;
+    cursor: pointer;
 }
