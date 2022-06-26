@@ -4,8 +4,7 @@ darkgray                    // background-color for shadow days
 rgb(199, 194, 194)          // use this background-color for normal days
 */
 
-.wrapper {
-    float: right;
+.calendar {
     background-color: rgb(31, 31, 31);
     margin: 50px auto;
     width: 230px;
@@ -13,7 +12,7 @@ rgb(199, 194, 194)          // use this background-color for normal days
     padding: 10px;
 }
 
-.calendar {
+.calendarWindow {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     justify-items: center;
@@ -33,7 +32,10 @@ rgb(199, 194, 194)          // use this background-color for normal days
     cursor: pointer;
 }
 .day:hover {
-    filter: brightness(75%);
+    filter: brightness(110%);
+}
+.day:active {
+    filter: brightness(105%);
 }
 
 .date {
