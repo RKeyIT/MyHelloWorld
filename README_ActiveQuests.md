@@ -1,5 +1,15 @@
 # MyHelloWorld
 
+**Quest 10**
+    1. Replace, save and repair applications in same before continue *Quest 8*
+    2. Create concept design.
+    3. Continue *Quest 8*.
+
+
+
+
+
+
 <!-- **Quest 9**
 
     1. Learn regular expressions. (this is already into code in index.html with ids = 'add', 'less' and other...).

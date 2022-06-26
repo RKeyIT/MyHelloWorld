@@ -5,10 +5,123 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SaveYourMoney</title>
-    <link rel="stylesheet" href="calendar.css">
+    <link rel="stylesheet" href="calendar/calendar.css">
 </head>
 <body>
-    <script src="generaljs.js"></script>
+
+
+    <!-- STATICTIC PAGE -->
+    <div class="currentMoneys">
+        <p>
+            <label for="current">Current coins
+                <div id="yourCurrent"></div>
+            </label>
+        </p>
+    </div>
+    <div class="perDay">
+        <p>
+            <label for="perDay">You can to spend <div id="perDay">0</div> coins today.
+            <br>
+            <div id="leftToPayday">0</div>
+            <div id="dayLeft">days</div> left to payday.
+            </label>
+        </p>
+        <p>
+            <label for="everyPayday">Payday setted every <div id="everyPayday">1</div> day of month</label>
+        </p>
+    </div>
+    <!-- STATICTIC PAGE -->
+
+
+
+
+
+
+
+
+
+    <!-- CALENDAR APP -->
+    <div class="wrapper">
+        <div class="anotherOneWrapper">
+        <div class="date">
+            <span class="arrow" onclick="prevMonth()">⇐</span>
+            <span id="fullDate">01.01.0101</span>
+            <span class="arrow" onclick="nextMonth()">⇒</span>
+        </div>
+            
+            <div class="calendar">
+
+                    <div id="monday" class="square dayOfWeek">Mon</div>
+                    <div id="tuesday" class="square dayOfWeek">Tue</div>
+                    <div id="wednesday" class="square dayOfWeek">Wed</div>
+                    <div id="thursday" class="square dayOfWeek">Thu</div>
+                    <div id="friday" class="square dayOfWeek">Fri</div>
+                    <div id="saturday" class="square dayOffs">Sat</div>
+                    <div id="sunday" class="square dayOffs">Sun</div>
+
+                    <div id="d1" class="square day">0</div>
+                    <div id="d2" class="square day">0</div>
+                    <div id="d3" class="square day">0</div>
+                    <div id="d4" class="square day">0</div>
+                    <div id="d5" class="square day">0</div>
+                    <div id="d6" class="square day dayOff">1</div>
+                    <div id="d7" class="square day dayOff">1</div>
+
+                    <div id="d8" class="square day">0</div>
+                    <div id="d9" class="square day">0</div>
+                    <div id="d10" class="square day">0</div>
+                    <div id="d11" class="square day">0</div>
+                    <div id="d12" class="square day">0</div>
+                    <div id="d13" class="square day dayOff">1</div>
+                    <div id="d14" class="square day dayOff">1</div>
+
+                    <div id="d15" class="square day">0</div>
+                    <div id="d16" class="square day">0</div>
+                    <div id="d17" class="square day">0</div>
+                    <div id="d18" class="square day">0</div>
+                    <div id="d19" class="square day">0</div>
+                    <div id="d20" class="square day dayOff">1</div>
+                    <div id="d21" class="square day dayOff">1</div>
+
+                    <div id="d22" class="square day">0</div>
+                    <div id="d23" class="square day">0</div>
+                    <div id="d24" class="square day">0</div>
+                    <div id="d25" class="square day">0</div>
+                    <div id="d26" class="square day">0</div>
+                    <div id="d27" class="square day dayOff">1</div>
+                    <div id="d28" class="square day dayOff">1</div>
+
+                    <div id="d29" class="square day">0</div>
+                    <div id="d30" class="square day colorisedDay">0</div>
+                    <div id="d31" class="square day">0</div>
+                    <div id="d32" class="square day">0</div>
+                    <div id="d33" class="square day">0</div>
+                    <div id="d34" class="square day dayOff">1</div>
+                    <div id="d35" class="square day dayOff">1</div>
+
+                    <div id="d36" class="square day">0</div>
+                    <div id="d37" class="square day">0</div>
+                    <div id="d38" class="square day">0</div>
+                    <div id="d39" class="square day">0</div>
+                    <div id="d40" class="square day">1</div>
+                    <div id="d41" class="square day dayOff">1</div>
+                    <div id="d42" class="square day dayOff">1</div>
+
+            </div>
+        </div>
+    </div>
+    <!-- CALENDAR APP -->
+
+
+
+
+
+
+
+
+
+    
+
     <div class="payday">
         <p>    <!--    here is something wrong     -->
                 <!-- sometimes console returns ATTANTION "can't get element cause its null"-->
@@ -61,24 +174,12 @@
             <button type="submit" id="saveButton" onclick="saveCoin()">Save</button>
         </p>
     </div>
-    <div class="currentMoneys">
-        <p>
-            <label for="current">Current coins
-                <div id="yourCurrent"></div>
-            </label>
-        </p>
-    </div>
-    <div class="perDay">
-        <p>
-            <label for="perDay">You can to spend <div id="perDay">0</div> coins today.
-            <br>
-            <div id="leftToPayday">0</div>
-            <div id="dayLeft">days</div> left to payday.
-            </label>
-        </p>
-        <p>
-            <label for="everyPayday">Payday setted every <div id="everyPayday">1</div> day of month</label>
-        </p>
-    </div>
+
+
+
+
+    <script src="generaljs.js"></script>
+    <script src="calendar/calendar.js"></script>
+
 </body>
 </html>

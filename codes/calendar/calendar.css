@@ -5,6 +5,7 @@ rgb(199, 194, 194)          // use this background-color for normal days
 */
 
 .wrapper {
+    float: right;
     background-color: rgb(31, 31, 31);
     margin: 50px auto;
     width: 230px;
