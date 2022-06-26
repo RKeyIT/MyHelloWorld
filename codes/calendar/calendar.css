@@ -1,3 +1,9 @@
+/* 
+rgb(66, 92, 93)             // use this for shadow days color
+darkgray                    // background-color for shadow days 
+rgb(199, 194, 194)          // use this background-color for normal days
+*/
+
 .wrapper {
     background-color: rgb(31, 31, 31);
     margin: 50px auto;
@@ -16,14 +22,16 @@
     width: 30px;
     height: 20px;
     border-radius: 25%;
-    background-color: rgb(199, 194, 194);
     text-align: center;
     line-height: 20px;
-    cursor: pointer;
     user-select: none;
     margin: 1px auto;
 }
-.square:hover {
+.day{
+    background-color: rgb(199, 194, 194);
+    cursor: pointer;
+}
+.day:hover {
     filter: brightness(75%);
 }
 
@@ -36,14 +44,13 @@
     justify-items: center;
 }
 .dayOfWeek {
-    background: rgb(81, 126, 118);
+    background: rgb(131, 166, 160);
 }
 .dayOffs {
-    background: rgb(100, 66, 72);
+    background: rgb(179, 147, 154);
 }
 .dayOff {
     color: rgb(94, 41, 41);
-    background: rgb(167, 164, 164);
 }
 .nullPoint {
     filter: brightness(0%);
@@ -53,4 +60,9 @@
     color: rgb(94, 41, 41);
     user-select: none;
     cursor: pointer;
+}
+
+.shadowDay {
+    color: rgb(66, 92, 93);
+    background-color: darkgray;
 }
