@@ -1,7 +1,7 @@
 # MyHelloWorld
 
 **Quest 10**
-    1. Replace, save and repair applications in same before continue *Quest 8*
+    1.  --DONE-- Replace, save and repair applications in same before continue *Quest 8*
     2. Create concept design.
     3. Continue *Quest 8*.
 
@@ -22,12 +22,12 @@
 
 **Quest 8**
 
-    1.  -DONE-  Create visual calendar model.
+    1.  --DONE--  Create visual calendar model.
     2. Add visual style for current day into calendar. Border for example.
     3. Add functions to assign dates to operations.
     4. Add first styles. For days with some operations.
     5. Create list with operations in "day". This must show what was does in this date
-    6.  -DONE-  Create shadow styles for days not from this month
+    6.  --DONE--  Create shadow styles for days not from this month
 
 
 
