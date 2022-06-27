@@ -6,8 +6,10 @@
     Some newest ideas:
     1. Calendar with all operations.
     2. Full history on the list and in the calendar.
-    3. Add evening-questions what for was reChanged money balance today.
-    4. Achievments like 1, 3, 5, 10, 15, 30 days without overspends. And another one and another one...
+    3. General statistic with user categories. And common categories like "Adds", "Spends", "Saves"
+    4. Radial statistics image.
+    5. Add evening-questions what for was reChanged money balance today.
+    6. Achievments like 1, 3, 5, 10, 15, 30 days without overspends. And another one and another one...
 <!--5. --CANCELED-- Quest 5, part 2: Add list with 1-28 numbers for chosing date of payday. -->
     6. 
     7. Connect pay card to app and sinchronise data.

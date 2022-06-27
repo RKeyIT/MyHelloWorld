@@ -12,6 +12,9 @@ let showedDate      // this date will be show Month and Year used now
 let dayOfWeek       // this variable needs to build calendar from correct day of week
 let daysInMonth     // this variable will save count of days into used month now
 
+let idOfDay                     // this is the day of week. From this day will be create any month of calendar
+let daysIndex = 0;              // needs for some calculatings
+
 const dateArray = []    // this array will save count of days and create days into calendar
 
 //  VARIABLES

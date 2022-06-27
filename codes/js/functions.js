@@ -7,8 +7,20 @@ function autoStart(){
     countOfDays();
     fDayOfWeek();
     buildCalendar();
+    showToday()
 };
 /******************CALENDAR AUTOSTART*********************/
+
+showToday();
+function showToday() {  //TAKE idOfDay NUMBER FROM buildCalendar() where is need this!!!
+    today = generalDate.getDate();
+    idOfDay = 'd'+(today+daysIndex);
+    if(month === generalDate.getMonth()){
+    document.getElementById(idOfDay).classList.add('today');
+    } else {
+    document.getElementById(idOfDay).classList.remove('today');
+    }
+}
 
 function showDate() {
     let mm = currentTime.toLocaleString('default', {month: 'long'}).charAt().toUpperCase() + 
@@ -38,7 +50,7 @@ function prevMonth(){
 
 
 function buildCalendar() {
-    let idOfDay                     // this is the day of week. From this day will be create any month of calendar
+    idOfDay                     // this is the day of week. From this day will be create any month of calendar
 
 /*****************PREV MONTH SHADOW**************************/
     daysInMonth = new Date(year, month, 0).getDate()
@@ -47,6 +59,7 @@ function buildCalendar() {
         idOfDay = 'd' + dayOfWeek--;
         document.getElementById(idOfDay).innerHTML = i;
         document.getElementById(idOfDay).classList.add('shadowDay')
+        daysIndex++
     }
 /*****************PREV MONTH SHADOW**************************/
 

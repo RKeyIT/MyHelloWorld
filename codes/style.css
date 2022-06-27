@@ -7,4 +7,5 @@ body {
 .wrapper {
     height: 100vh;
     width: 33vw;
+    outline: 2px black solid;
 }
