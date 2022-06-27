@@ -92,3 +92,4 @@ function buildCalendar() {
     }
 /*****************NEXT MONTH SHADOW**************************/
 }
+/****************END OF CALENDAR APP***************************/
