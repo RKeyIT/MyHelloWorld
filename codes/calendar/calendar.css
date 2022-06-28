@@ -6,26 +6,37 @@ rgb(199, 194, 194)          // use this background-color for normal days
 
 .calendar {
     background-color: rgb(31, 31, 31);
-    margin: 50px auto;
-    width: 230px;
-    border-radius: 20px;
-    padding: 10px;
+    margin: 1rem auto;
+    width: 29rem;
+    height: 91vh;
+    border-radius: 2rem;
+    padding: 1rem;
+    font-size: 2.0rem;
 }
 
-.calendarWindow {
+.calendarDaysWindow {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     justify-items: center;
 }
 
+.calendarNotes {
+    background-color: gainsboro;
+    margin: 1rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    height: 39vh;
+    width: 25rem;
+}
+
 .square/*, .date*/{ 
-    width: 30px;
-    height: 20px;
-    border-radius: 25%;
+    width: 4rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
     text-align: center;
-    line-height: 20px;
+    line-height: 2.5rem;
     user-select: none;
-    margin: 1px auto;
+    margin: 0.1rem auto;
 }
 .day{
     background-color: rgb(199, 194, 194);
@@ -54,9 +65,6 @@ rgb(199, 194, 194)          // use this background-color for normal days
 }
 .dayOff {
     color: rgb(94, 41, 41);
-}
-.nullPoint {
-    filter: brightness(0%);
 }
 
 .arrow, #fullDate{

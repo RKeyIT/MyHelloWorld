@@ -9,3 +9,46 @@ body {
     width: 33vw;
     outline: 2px black solid;
 }
+
+
+
+
+#chosenDay {
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    margin: 0 0 1rem 0;
+}
+.note1 {
+    background-color: rgb(200, 198, 198);
+    border-radius: 1rem;
+}
+.note2 {
+    background-color: rgb(172, 172, 172);
+    border-radius: 1rem;
+}
+.symbol {
+    font-weight: bolder;
+    width: 2rem;
+    padding: 1rem;
+}
+.red {
+    color: red;
+}
+
+.green{
+    color: green;
+}
+
+.blue {
+    color: blue;
+}
+.red, .green, .blue {
+    font-weight: bolder;
+}
+.time {
+    float: inline-end;
+    font-weight: 50;
+    color: rgb(48, 67, 67);
+    padding: 0 1rem 0 1rem;
+}
