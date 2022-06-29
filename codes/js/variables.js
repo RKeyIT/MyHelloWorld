@@ -15,8 +15,6 @@ let daysInMonth     // this variable will save count of days into used month now
 let idOfDay                     // this is the day of week. From this day will be create any month of calendar
 let daysIndex = 0;              // needs for some calculatings
 
-const dateArray = []    // this array will save count of days and create days into calendar
-
 //  VARIABLES
 let currentCoins = 0;   // general moneys in account
 let depositeCoins = 0;  //    Coins for save
@@ -27,6 +25,10 @@ let spendResult = 0;    //  Installed by function   ...     after calculate date
 //let daysInMonth = 0;    //  Installed by function "countOfDays()";
 
 const MONEYS = []   // array with objects *coin*
+
 let coin;           // always new object from class Coin  
 //  daysInMonth is variable for operations next.    For Example: spendPerDay = result / daysInMonth + 1
 //  (+ 1 is for last day before payday)
+
+const someDate = []    // this array will save count of days and create days into calendar
+const dailyOperations = []

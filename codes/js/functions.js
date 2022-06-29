@@ -7,19 +7,24 @@ function autoStart(){
     countOfDays();
     fDayOfWeek();
     buildCalendar();
-    showToday()
+    showToday();
+    rezeroDaysIndex()
 };
 /******************CALENDAR AUTOSTART*********************/
 
 showToday();
 function showToday() {  //TAKE idOfDay NUMBER FROM buildCalendar() where is need this!!!
     today = generalDate.getDate();
+    document.getElementById(idOfDay).classList.remove('today');
     idOfDay = 'd'+(today+daysIndex);
-    if(month === generalDate.getMonth()){
-    document.getElementById(idOfDay).classList.add('today');
+    if(month == generalDate.getMonth()){
+        document.getElementById(idOfDay).classList.add('today');
     } else {
     document.getElementById(idOfDay).classList.remove('today');
     }
+}
+function rezeroDaysIndex() {
+    daysIndex = 0
 }
 
 function showDate() {
@@ -39,18 +44,17 @@ function fDayOfWeek() {
 }
 
 function nextMonth(){
-    currentTime = new Date(year, ++month, 1)
-    autoStart()
+    currentTime = new Date(year, ++month, 1);
+    autoStart();
 }
 
 function prevMonth(){
     currentTime = new Date(year, --month, 1)
-    autoStart()
+    autoStart();
 }
 
 
 function buildCalendar() {
-    idOfDay                     // this is the day of week. From this day will be create any month of calendar
 
 /*****************PREV MONTH SHADOW**************************/
     daysInMonth = new Date(year, month, 0).getDate()

@@ -13,103 +13,7 @@
 <body>
 
 
-    <!-- STATICTIC PAGE -->
-    <div class="wrapper">
-        <div class="statistic">
-            <div class="currentMoneys">
-                <p>
-                    <label for="current">Current coins
-                        <span id="yourCurrent">0</span>
-                    </label>
-                </p>
-            </div>
-            <div class="perDay">
-                <p>
-                    <label for="perDay">You can to spend <span id="perDay">0</span> coins today.</label>
-                    <br>
-                </p>
-                <p>
-                    <label for="leftToPayday">
-                    <span id="leftToPayday">0</span>
-                    <span id="dayLeft">days</span> left to payday.
-                    </label>
-                </p>
-                <p>
-                    <label for="everyPayday">Payday setted every <span id="everyPayday">1</span> day of month</label>
-                </p>
-            </div>
-        </div>
-    </div>
-    <!-- STATICTIC PAGE -->
-
-
-
-
-
-    <!-- OPERATIONS PAGE -->
-
-    <div class="wrapper">
-        <div class="operations">
-            <div class="payday">
-                <p>    <!--    here is something wrong     -->
-                        <!-- sometimes console returns ATTANTION "can't get element cause its null"-->
-                    <label for="">Day of PayDay</label><input type="text" min="1" max="28" maxlength="2"
-                        name="DayOfPayDay" id="payday" placeholder="1-28 numbers"
-                        oninput="this.value = this.value.replace(/[^0-9]/g, '')">
-                    <button type="submit" id="payDayButton" onclick="payDay()">Set day</button>
-                    <!--    wrong code ends     -->
-                </p>
-            </div>
-            <div class="add">
-                <p>    <!--  ADD COINS -->
-                    <label>Contribute coins<input type="text" id="add" placeholder="+moneys"                       
-                        oninput="this.value = this.value.replace(/[^0-9]/g, '')"></label>
-                </p>
-                <p>
-                    <label>From what you added?</label><input type="text" id="addedFrom" placeholder="Contributed from...">
-                </p>
-                <p>
-                    <button type="submit" id="addButton" onclick="takeCoin()">Add</button>
-                </p>
-            </div>
-            <div class="lose">
-                <p>     <!--  SPEND COINS    -->
-                    <label>Spend coins<input type="text" id="less" placeholder="-moneys"
-                        oninput="this.value = this.value.replace(/[^0-9]/g, '')"></label>
-                </p>
-                <p>
-                    <label>For what your want to spend your moneys?</label><input type="text" id="losedFor" placeholder="Spended for...">
-                </p>
-                <p>
-                    <button type="submit" id="loseButton" onclick="spendCoin()">Spend</button>
-                </p>
-            </div>
-            <div class="save">
-                <p>     <!--  SAVE COINS -->
-                    <label>What count of coins you want to save?</label><input type="text" id="save"
-                    oninput="this.value = this.value.replace(/[^0-9]/g, '')"
-                    placeholder="amount of saved coins">
-                </p>
-                <p>
-                    <label for="saveFor">Comment:</label><input type="text" id="saveFor"
-                    placeholder="for what? :)">
-                </p>
-                <p>
-                    <button type="submit" id="saveButton" onclick="saveCoin()">Save</button>
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <!-- OPERATIONS PAGE -->
-
-
-
-
-
-
-
-
+    <!-- FOR NOT A LONG TIME CALENDAR WILL BE FIRST IN PAGE FOR DEBUGGING -->
     <!-- CALENDAR APP -->
     <div class="wrapper">
         <div class="calendar">
@@ -214,6 +118,121 @@
         </div>
     </div>
     <!-- CALENDAR APP -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- STATICTIC PAGE -->
+    <div class="wrapper">
+        <div class="statistic">
+            <div class="currentMoneys">
+                <p>
+                    <label for="current">Current coins
+                        <span id="yourCurrent">0</span>
+                    </label>
+                </p>
+            </div>
+            <div class="perDay">
+                <p>
+                    <label for="perDay">You can to spend <span id="perDay">0</span> coins today.</label>
+                    <br>
+                </p>
+                <p>
+                    <label for="leftToPayday">
+                    <span id="leftToPayday">0</span>
+                    <span id="dayLeft">days</span> left to payday.
+                    </label>
+                </p>
+                <p>
+                    <label for="everyPayday">Payday setted every <span id="everyPayday">1</span> day of month</label>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- STATICTIC PAGE -->
+
+
+
+
+
+    <!-- OPERATIONS PAGE -->
+
+    <div class="wrapper">
+        <div class="operations">
+            <div class="payday">
+                <p>    <!--    here is something wrong     -->
+                        <!-- sometimes console returns ATTANTION "can't get element cause its null"-->
+                    <label for="">Day of PayDay</label><input type="text" min="1" max="28" maxlength="2"
+                        name="DayOfPayDay" id="payday" placeholder="1-28 numbers"
+                        oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                    <button type="submit" id="payDayButton" onclick="payDay()">Set day</button>
+                    <!--    wrong code ends     -->
+                </p>
+            </div>
+            <div class="add">
+                <p>    <!--  ADD COINS -->
+                    <label>Contribute coins<input type="text" id="add" placeholder="+moneys"                       
+                        oninput="this.value = this.value.replace(/[^0-9]/g, '')"></label>
+                </p>
+                <p>
+                    <label>From what you added?</label><input type="text" id="addedFrom" placeholder="Contributed from...">
+                </p>
+                <p>
+                    <button type="submit" id="addButton" onclick="takeCoin()">Add</button>
+                </p>
+            </div>
+            <div class="lose">
+                <p>     <!--  SPEND COINS    -->
+                    <label>Spend coins<input type="text" id="less" placeholder="-moneys"
+                        oninput="this.value = this.value.replace(/[^0-9]/g, '')"></label>
+                </p>
+                <p>
+                    <label>For what your want to spend your moneys?</label><input type="text" id="losedFor" placeholder="Spended for...">
+                </p>
+                <p>
+                    <button type="submit" id="loseButton" onclick="spendCoin()">Spend</button>
+                </p>
+            </div>
+            <div class="save">
+                <p>     <!--  SAVE COINS -->
+                    <label>What count of coins you want to save?</label><input type="text" id="save"
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                    placeholder="amount of saved coins">
+                </p>
+                <p>
+                    <label for="saveFor">Comment:</label><input type="text" id="saveFor"
+                    placeholder="for what? :)">
+                </p>
+                <p>
+                    <button type="submit" id="saveButton" onclick="saveCoin()">Save</button>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- OPERATIONS PAGE -->
+
+
+
+
+
+
+
+
 
 
 

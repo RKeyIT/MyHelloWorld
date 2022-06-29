@@ -15,3 +15,5 @@ Variables, Arrays, Objects...
 11. <DONE> Build shadow days.
 
     <Full rework for 10-11 tasks. Calendar taked big update...>
+
+12. Create function onclick on day into calendar for showing history of this day
