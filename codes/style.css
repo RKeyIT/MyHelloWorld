@@ -13,6 +13,9 @@ body {
 
 
 
+.calendarNotes {
+    font-family: 'Courier New', Courier, monospace;
+}
 #chosenDay {
     text-align: center;
     justify-content: center;
@@ -30,18 +33,19 @@ body {
 .symbol {
     font-weight: bolder;
     width: 2rem;
-    padding: 1rem;
+    padding: 0 1rem;
+
 }
 .red {
-    color: red;
+    color: rgb(154, 47, 47);
 }
 
 .green{
-    color: green;
+    color: rgb(0, 148, 81);
 }
 
 .blue {
-    color: blue;
+    color: rgb(102, 102, 168);
 }
 .red, .green, .blue {
     font-weight: bolder;

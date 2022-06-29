@@ -23,6 +23,7 @@
   1) Overspends
   2) Bankrot
   3) Count of days without spends!
+  4) "This days..." Overspendings 7 days in a row
 
 
 4.  Into app can't be negative numbers. 
