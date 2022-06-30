@@ -31,4 +31,4 @@ let coin;           // always new object from class Coin
 //  (+ 1 is for last day before payday)
 
 const someDate = []    // this array will save count of days and create days into calendar
-const dailyOperations = []
+const dailyOperations = []  // this array needs for copying MONEYS array but only for chosen date
