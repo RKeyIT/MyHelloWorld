@@ -3,6 +3,9 @@
 /******************CALENDAR AUTOSTART*********************/
 autoStart()
 function autoStart(){
+    if(index !== undefined) {
+        document.getElementById(index).classList.remove('today');
+    }
     showDate();
     countOfDays();
     fDayOfWeek();
@@ -14,13 +17,12 @@ function autoStart(){
 
 showToday();
 function showToday() {  //TAKE idOfDay NUMBER FROM buildCalendar() where is need this!!!
-    today = generalDate.getDate();
-    document.getElementById(idOfDay).classList.remove('today');
-    idOfDay = 'd'+(today+daysIndex);
-    if(month == generalDate.getMonth()){
-        document.getElementById(idOfDay).classList.add('today');
-    } else {
-    document.getElementById(idOfDay).classList.remove('today');
+    for(i = 1; i < 43; i++) {
+        index = 'd'+i;
+        if(document.getElementById(index).innerHTML == generalDate.getDate() &&
+        !document.getElementById(index).classList.contains('shadowDay') === true) {
+            document.getElementById(index).classList.add('today')
+        }
     }
 }
 function rezeroDaysIndex() {

@@ -16,4 +16,7 @@ Variables, Arrays, Objects...
 
     <Full rework for 10-11 tasks. Calendar taked big update...>
 
-12. Create function onclick on day into calendar for showing history of this day
+13. FIX INCORRECT DATA SHOW / Create function onclick on day into calendar for showing history of this day.
+    1) This needs function with (x) where x is id of day f.e. d23.
+    2) Slice this string and get number 23 and equal this with cycle for
+    3) May be rechange all IDs "d##" on "0##"?

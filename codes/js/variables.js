@@ -19,6 +19,8 @@ let daysIndex = 0;              // needs for some calculatings
 let currentCoins = 0;   // general moneys in account
 let depositeCoins = 0;  //    Coins for save
 
+let index;              // this variable will colorise current day into calendar  
+
 let payday  =  1;             //   Day of date of general money takes.
 
 let spendResult = 0;    //  Installed by function   ...     after calculate dates
