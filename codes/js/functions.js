@@ -3,15 +3,11 @@
 /******************CALENDAR AUTOSTART*********************/
 autoStart()
 function autoStart(){
-    if(index !== undefined) {
-        document.getElementById(index).classList.remove('today');
-    }
     showDate();
     countOfDays();
     fDayOfWeek();
     buildCalendar();
     showToday();
-    rezeroDaysIndex()
 };
 /******************CALENDAR AUTOSTART*********************/
 
@@ -19,14 +15,15 @@ showToday();
 function showToday() {  //TAKE idOfDay NUMBER FROM buildCalendar() where is need this!!!
     for(i = 1; i < 43; i++) {
         index = 'd'+i;
+        if(document.getElementById(index).classList.contains('today') == true){
+            document.getElementById(index).classList.remove('today')
+        }
         if(document.getElementById(index).innerHTML == generalDate.getDate() &&
-        !document.getElementById(index).classList.contains('shadowDay') === true) {
+        !document.getElementById(index).classList.contains('shadowDay') === true &&
+        month == generalDate.getMonth()) {
             document.getElementById(index).classList.add('today')
         }
     }
-}
-function rezeroDaysIndex() {
-    daysIndex = 0
 }
 
 function showDate() {
@@ -65,7 +62,6 @@ function buildCalendar() {
         idOfDay = 'd' + dayOfWeek--;
         document.getElementById(idOfDay).innerHTML = i;
         document.getElementById(idOfDay).classList.add('shadowDay')
-        daysIndex++
     }
 /*****************PREV MONTH SHADOW**************************/
 
