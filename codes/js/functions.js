@@ -11,6 +11,40 @@ function autoStart(){
 };
 /******************CALENDAR AUTOSTART*********************/
 
+function showObjects() {
+    for(i = 0; i < MONEYS.length; i++){
+        if(MONEYS[i].date.setHours(0,0,0,0) === chosenDate.setHours(0,0,0,0)) {
+            document.getElementById('green').innerHTML = MONEYS[i].amount
+        }
+    }
+}
+let chosenDate
+function chosenDayHistory(id) {
+    if(document.getElementById(id).classList.contains('shadowDay')){
+        return;
+    }
+    let dd = document.getElementById(id).innerHTML;
+    // ID sets
+
+    chosenDate = new Date(year, month, dd);
+    let formatedDate = '';
+    if(chosenDate.getDate() < 10) {
+        formatedDate = '0' + chosenDate.getDate()
+    } else {
+        formatedDate = chosenDate.getDate()
+    }
+    if(chosenDate.getMonth() < 10) {
+        formatedDate += '.0' + (chosenDate.getMonth() + 1);
+    } else {
+        formatedDate += '.' + (chosenDate.getMonth() + 1);
+    }
+    formatedDate += '.' + chosenDate.getFullYear();
+    document.getElementById('chosenDay').innerHTML = formatedDate
+
+    // show objects Coin
+    showObjects()
+}
+
 showToday();
 function showToday() {  //TAKE idOfDay NUMBER FROM buildCalendar() where is need this!!!
     for(i = 1; i < 43; i++) {
