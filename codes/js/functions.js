@@ -1,5 +1,18 @@
 
 /*****************STARTS OF CALENDAR APP*******************/
+/*****************STARTS OF CALENDAR APP*******************/
+/*****************STARTS OF CALENDAR APP*******************/
+
+// DEBUGGING COIN OBJECT START
+// coin = {}
+// coin.date = new Date();
+// coin.amount = '100';
+// coin.color = 'green';
+// coin.comment = 'checker'
+// MONEYS.push(coin)
+// DEBUGGING COIN OBJECT END
+
+
 /******************CALENDAR AUTOSTART*********************/
 autoStart()
 function autoStart(){
@@ -56,6 +69,49 @@ function showToday() {  //TAKE idOfDay NUMBER FROM buildCalendar() where is need
         !document.getElementById(index).classList.contains('shadowDay') === true &&
         month == generalDate.getMonth()) {
             document.getElementById(index).classList.add('today')
+        }
+    }
+
+    // SHOW INFO ABOUT CURRENT DAY INTO operationsWindow
+
+    //  SHOW OPERATIONS BY CURRENT DAY
+    let formatedDate = '';
+    if(generalDate.getDate() < 10) {
+        formatedDate = '0' + generalDate.getDate()
+    } else {
+        formatedDate = generalDate.getDate()
+    }
+    if(generalDate.getMonth() < 10) {
+        formatedDate += '.0' + (generalDate.getMonth() + 1);
+    } else {
+        formatedDate += '.' + (generalDate.getMonth() + 1);
+    }
+    formatedDate += '.' + generalDate.getFullYear();
+    document.getElementById('chosenDay').innerHTML = formatedDate;
+
+    // CYCLE FOR SHOW ALL OPERATIONS
+    for(i = 0; i < MONEYS.length; i++){
+        if(MONEYS.length > 0) {
+            if(MONEYS[i].date.getDate() === generalDate.getDate() &&
+                MONEYS[i].date.getMonth() === generalDate.getMonth() &&
+                MONEYS[i].date.getFullYear() ===generalDate.getFullYear()) {
+                if(MONEYS[i].color === 'green'){
+                document.getElementById('symbol').innerHTML = '+'
+                } else {
+                    document.getElementById('symbol').innerHTML = '-'
+                }
+                document.getElementById('amount').innerHTML = MONEYS[i].amount
+                let hours = MONEYS[i].date.getHours();
+                if(hours < 10) {hours = '0' + hours};
+                let minutes = MONEYS[i].date.getMinutes();
+                if(minutes < 10) {minutes = '0' + minutes};
+                document.getElementById('time').innerHTML = '' + 
+                                                            hours + ':' +
+                                                            minutes;
+                document.getElementById('comment').innerHTML = MONEYS[i].comment
+            }
+        } else {
+            document.getElementById('note1').innerHTML = 'Has no money operations in this day'
         }
     }
 }
@@ -126,7 +182,11 @@ function buildCalendar() {
 /*****************NEXT MONTH SHADOW**************************/
 }
 /****************END OF CALENDAR APP*************************/
+/****************END OF CALENDAR APP*************************/
+/****************END OF CALENDAR APP*************************/
 
+/*****************STARTS OF GENERAL JS***********************/
+/*****************STARTS OF GENERAL JS***********************/
 /*****************STARTS OF GENERAL JS***********************/
 function payDay() {     // SET DATE OF PAYDAY
     let writtenDay = Number(document.getElementById('payday').value);
@@ -280,3 +340,8 @@ function daysLeftToPayday(){            //  returns count of days before payday
     };
 }
 /*****************ENDS OF GENERAL JS****************/
+/*****************ENDS OF GENERAL JS****************/
+/*****************ENDS OF GENERAL JS****************/
+
+
+

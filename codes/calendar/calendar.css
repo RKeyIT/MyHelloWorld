@@ -64,19 +64,19 @@ rgb(199, 194, 194)          // use this background-color for normal days
     background: rgb(179, 147, 154);
 }
 .dayOff {
-    color: rgb(94, 41, 41);
+    color: rgb(116, 51, 65);
 }
 
-.arrow, #fullDate{
+.arrow{
     color: rgb(94, 41, 41);
     user-select: none;
     cursor: pointer;
 }
 
 .today {
-    color: rgb(24, 2, 39);
-    outline: 1px inset rgb(24, 2, 39);
-    outline-offset: -1px;
+    outline: 3px whitesmoke;
+    outline-style: dashed;
+    outline-offset: -3px;
     background-color: burlywood;
 }
 .shadowDay {
