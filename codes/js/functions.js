@@ -4,12 +4,12 @@
 /*****************STARTS OF CALENDAR APP*******************/
 
 // DEBUGGING COIN OBJECT START
-// coin = {}
-// coin.date = new Date();
-// coin.amount = '100';
-// coin.color = 'green';
-// coin.comment = 'checker'
-// MONEYS.push(coin)
+coin = {}
+coin.date = new Date();
+coin.amount = '100';
+coin.color = 'green';
+coin.comment = 'checker'
+MONEYS.push(coin)
 // DEBUGGING COIN OBJECT END
 
 
@@ -109,14 +109,12 @@ function showToday() {  //TAKE idOfDay NUMBER FROM buildCalendar() where is need
                 } else {
                     document.getElementById('symbol').innerHTML = '-'
                 }
+                    let hours = MONEYS[i].date.getHours();
+                    let minutes = MONEYS[i].date.getMinutes();
+                    if(hours < 10) {hours = '0' + hours};
+                    if(minutes < 10) {minutes = '0' + minutes};
                 document.getElementById('amount').innerHTML = MONEYS[i].amount
-                let hours = MONEYS[i].date.getHours();
-                if(hours < 10) {hours = '0' + hours};
-                let minutes = MONEYS[i].date.getMinutes();
-                if(minutes < 10) {minutes = '0' + minutes};
-                document.getElementById('time').innerHTML = '' + 
-                                                            hours + ':' +
-                                                            minutes;
+                document.getElementById('time').innerHTML = hours + ':' + minutes;
                 document.getElementById('comment').innerHTML = MONEYS[i].comment
             }
             i++
