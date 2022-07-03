@@ -52,8 +52,16 @@ function chosenDayHistory(id) {
         formatedDate += '.' + (chosenDate.getMonth() + 1);
     }
     formatedDate += '.' + chosenDate.getFullYear();
-    document.getElementById('chosenDay').innerHTML = formatedDate
-
+    document.getElementById('chosenDate').innerHTML = formatedDate
+    for(i=1; i < 43; i++) {
+        if(document.getElementById('d'+i).classList.contains('chosenDay') == true) {
+        document.getElementById('d'+i).classList.remove('chosenDay')
+        }
+        if(document.getElementById('d'+i).innerHTML == dd &&
+        !document.getElementById('d'+i).classList.contains('shadowDay')) {
+            document.getElementById('d'+i).classList.add('chosenDay')
+        }
+    }
     // show objects Coin
     showObjects()
 }
@@ -87,10 +95,11 @@ function showToday() {  //TAKE idOfDay NUMBER FROM buildCalendar() where is need
         formatedDate += '.' + (generalDate.getMonth() + 1);
     }
     formatedDate += '.' + generalDate.getFullYear();
-    document.getElementById('chosenDay').innerHTML = formatedDate;
+    document.getElementById('chosenDate').innerHTML = formatedDate;
 
     // CYCLE FOR SHOW ALL OPERATIONS
-    for(i = 0; i < MONEYS.length; i++){
+    do{
+        let i = 0
         if(MONEYS.length > 0) {
             if(MONEYS[i].date.getDate() === generalDate.getDate() &&
                 MONEYS[i].date.getMonth() === generalDate.getMonth() &&
@@ -110,10 +119,13 @@ function showToday() {  //TAKE idOfDay NUMBER FROM buildCalendar() where is need
                                                             minutes;
                 document.getElementById('comment').innerHTML = MONEYS[i].comment
             }
+            i++
         } else {
             document.getElementById('note1').innerHTML = 'Has no money operations in this day'
         }
     }
+    while(i < MONEYS.length)
+    
 }
 
 function showDate() {

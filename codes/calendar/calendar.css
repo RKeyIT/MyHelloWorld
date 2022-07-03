@@ -74,12 +74,16 @@ rgb(199, 194, 194)          // use this background-color for normal days
 }
 
 .today {
-    outline: 3px whitesmoke;
-    outline-style: dashed;
-    outline-offset: -3px;
+    
     background-color: burlywood;
 }
 .shadowDay {
     color: rgb(66, 92, 93);
     background-color: darkgray;
+}
+.chosenDay {
+    outline: 3px darkslateblue;
+    outline-style: dashed;
+    outline-offset: -3px;
+    color: darkslateblue;
 }
