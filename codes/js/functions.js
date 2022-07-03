@@ -14,7 +14,7 @@ function autoStart(){
 function showObjects() {
     for(i = 0; i < MONEYS.length; i++){
         if(MONEYS[i].date.setHours(0,0,0,0) === chosenDate.setHours(0,0,0,0)) {
-            document.getElementById('green').innerHTML = MONEYS[i].amount
+            document.getElementById('amount').innerHTML = MONEYS[i].amount
         }
     }
 }
