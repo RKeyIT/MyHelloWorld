@@ -23,7 +23,6 @@ let index;              // this variable will colorise current day into calendar
 let payday  =  1;             //   Day of date of general money takes.
 
 let spendResult = 0;    //  Installed by function   ...     after calculate dates
-//let daysInMonth = 0;    //  Installed by function "countOfDays()";
 
 const MONEYS = []   // array with objects *coin*
 

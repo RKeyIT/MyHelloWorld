@@ -5,13 +5,12 @@ function payDay() {     // SET DATE OF PAYDAY
     let writtenDay = Number(document.getElementById('payday').value);
     if (writtenDay <= 28 && writtenDay > 0) {
         payday = writtenDay;
-        document.getElementById('payday').value = '';   // clear input after accept
     }
     else {
         alert('Wrong date. 1st day has been setted.');
         payday = 1;
-        document.getElementById('payday').value = '';   //  alert and after - clear input
     }
+    document.getElementById('payday').value = '';   // clear input after accept
     document.getElementById('everyPayday').innerHTML = payday;
     calculateCurrentMoneys();
     spendPerDay();
@@ -111,30 +110,6 @@ function spendPerDay() {
 
 
 // NEXT BLOCK OF CODE IS *DATES* AND BOUNDED FUNCTIONS
-/*function countOfDays() {    //  returns count of days in current month
-    let dateOne = new Date();
-    let dateTwo = dateOne.setDate(dateOne.getDate() + 30); //   optional variable for save changed dateOne variable
-        dateOne = dateOne.getDate();
-
-        //  GLOBAL VARIABLE WILL BE HERE
-        currentDayOfDate = new Date();  // GLOBAL VARIABLE WITH CYCLIC CALLS
-        currentDayOfDate = currentDayOfDate.getDate();
-        //  GLOBAL VARIABLE WAS HERE
-
-    if (currentDayOfDate === dateOne){
-        daysInMonth = 30
-    };
-    if (currentDayOfDate === dateOne + 1){
-        daysInMonth = 31
-    };
-    if (currentDayOfDate === dateOne - 2){
-        daysInMonth = 28
-    }; 
-    if (currentDayOfDate === dateOne - 1){
-        daysInMonth = 29
-    };  
-    daysLeftToPayday();
-};*/
     // ***    BOUNDED FUNCTIONS    ***
 function daysLeftToPayday(){            //  returns count of days before payday
     let paydayInThisMonth = payday - day;                  //count of days if payday > currentDayOfDate
@@ -239,7 +214,7 @@ showOperations()
 function showOperations() {
     if (MONEYS.length = 0) {
         document.getElementById('note1').innerHTML = 'Has no money operations in this day'
-    }
+    } else {
     do{
         let i = 0
         if(MONEYS.length > 0) {
@@ -270,6 +245,7 @@ function showOperations() {
         }
     }
     while(i < MONEYS.length)
+}
 }
 
 showToday();

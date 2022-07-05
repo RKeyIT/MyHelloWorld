@@ -27,10 +27,34 @@ of theys moneys by themselfs for future.
    This files has numbers for create better queue of looadings.
 
 2. FULL descriptions list for used names (vars, funcs and other)
-    1) Variables:
-       1) generalDate - [UNCHANGEBLE] - current date. From this variable begins all date calculatings.
-       2) year, month, day - [changeble] - operative dates for dynamic calculatings with changes from a lot of funcs.
-       3) currentTime - [?changeble] - like a general date. But needs for dynamic calendar buildigs. [IsThisReallyNeeds?]
-       4) dayOfWeek - [changeble] - save day (like a 'Monday') and return this for next calculator building process.
-       5) daysInMonth - [changeble] - save count of days into operative month.
-       6) 
+    2.1 CONSTs / ARRs:
+        1) generalDate - [UNCHANGEBLE/CONST] - current date. From this variable begins all date calculatings.
+        2) MONEYS[] - [CONST/ARRAY/changeble] - 
+        3) dailyOperations[] - [CONST/ARRAY/changeble] - 
+
+    2.2 VARIABLES:
+       1) year, month, day - [changeble] - operative dates for dynamic calculatings with changes from a lot of funcs.
+            That used into:
+                1. daysLeftToPayday() - [day] - only
+                2. chosenDayHistory()
+                3. countOfDays()
+                4. prevMonth()
+                5. nextMonth()
+                6. buildCalendar()
+       2) currentTime - [?changeble] - like a general date. But needs for dynamic calendar buildigs. [IsThisReallyNeeds?]
+       3) dayOfWeek - [changeble] - save day (like a 'Monday') and return this for next calculator building process.
+       4) daysInMonth - [changeble] - save count of days into operative month.
+       5) idOfDay - [changeble]
+       6) daysIndex - [changeble]
+       7) currentCoins - [changeble]
+       8) depositeCoins - [changeble]
+       9)  index - [changeble] 
+       10) payday - [changeble] 
+       11) spendResult - [changeble]
+
+    2.3 CLASSES / OBJECTS / CUSTOM METHODS:
+        1) Coin [CLASS]
+        2) coin{} [OBJECT]
+        3) take() [METHOD]
+        4) spend() [METHOD]
+        5) save() [METHOD]
