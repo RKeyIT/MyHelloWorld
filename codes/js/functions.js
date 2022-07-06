@@ -251,14 +251,14 @@ function showOperations() {
 showToday();
 function showToday() {  //TAKE idOfDay NUMBER FROM buildCalendar() where is need this!!!
     for(i = 1; i < 43; i++) {
-        index = 'd'+i;
-        if(document.getElementById(index).classList.contains('today') == true){
-            document.getElementById(index).classList.remove('today')
+        idOfDay = 'd'+i;
+        if(document.getElementById(idOfDay).classList.contains('today') == true){
+            document.getElementById(idOfDay).classList.remove('today')
         }
-        if(document.getElementById(index).innerHTML == generalDate.getDate() &&
-        !document.getElementById(index).classList.contains('shadowDay') === true &&
+        if(document.getElementById(idOfDay).innerHTML == generalDate.getDate() &&
+        !document.getElementById(idOfDay).classList.contains('shadowDay') === true &&
         month == generalDate.getMonth()) {
-            document.getElementById(index).classList.add('today')
+            document.getElementById(idOfDay).classList.add('today')
         }
     }
 
