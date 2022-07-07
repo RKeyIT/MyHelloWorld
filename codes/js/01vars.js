@@ -12,17 +12,13 @@ let dayOfWeek       // this variable needs to build calendar from correct day of
 let daysInMonth     // this variable will save count of days into used month now
 
 let idOfDay                     // this is the day of week. From this day will be create any month of calendar
-let daysIndex = 0;              // needs for some calculatings
 
-//  VARIABLES
 let currentCoins = 0;   // general moneys in account
-let depositeCoins = 0;  //    Coins for save
-
-let index;              // this variable will colorise current day into calendar  
 
 let payday  =  1;             //   Day of date of general money takes.
 
 let spendResult = 0;    //  Installed by function   ...     after calculate dates
+//let daysInMonth = 0;    //  Installed by function "countOfDays()";
 
 const MONEYS = []   // array with objects *coin*
 
