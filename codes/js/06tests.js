@@ -1,28 +1,22 @@
-let colr
-
-for (i = 0; i < 100; i++) {
-    colr = Math.random(1,3)
-    if (colr == 1) {colr = 'green'}
-    if (colr == 2) {colr = 'red'} 
-    if (colr == 3) {colr = 'blue'}
-
-    var coina = new Coin(
-        this.amount = Math.random(1, 10000),
-        this.date = new Date(year / Math.random(), month / Math.random(), day / Math.random()),
-        this.color = colr,
-        this.comment = 'test'
-    )
-
-    MONEYS.push(coina);
+let coler
+function randomNum(max) {
+    return Math.floor(Math.random() * max)
 }
 
-// var min = 0;
-// var max = 2030
-// var dat = new Date(
-//  	Math.floor(Math.random() * (max - min + 1) + min), 
-// 	Math.floor(Math.random() * (max - min + 1) + min),
-//   Math.floor(Math.random() * (max - min + 1) + min),
-//   Math.floor(Math.random() * (max - min + 1) + min),
-//   Math.floor(Math.random() * (max - min + 1) + min),
-//   Math.floor(Math.random() * (max - min + 1) + min),
-//   Math.floor(Math.random() * (max - min + 1) + min),
+testFill()
+function testFill() {
+for (i = 0; i < 100; i++) {
+    coler = randomNum(3);
+    if (coler == 0) {coler = 'green'};
+    if (coler == 1) {coler = 'red'} ;
+    if (coler == 2) {coler = 'blue'};
+
+    let coina = new Coin();
+        coina.amount = Math.floor(Math.random()*1000000);
+        coina.date = new Date(Math.floor(Math.random()*2000000000000));
+        coina.color = coler;
+        coina.comment = 'test';
+    
+    MONEYS.push(coina);
+}
+}
