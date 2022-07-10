@@ -12,7 +12,6 @@
 **Quest 10**
     1.  --DONE-- Replace, save and repair applications in same before continue *Quest 8*
     2. Create concept design.
-    3. Continue *Quest 8*.
 
 
 

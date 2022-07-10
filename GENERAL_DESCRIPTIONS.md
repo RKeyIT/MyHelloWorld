@@ -83,19 +83,22 @@ of theys moneys by themselfs for future.
         
     2.4 FUNCTIONS.
         1) payDay() - this changes date of payday or install this in first day of month
-        2) takeCoin() - [UsedWithClassMethod] - used for *context*
-        3) spendCoin() - [UsedWithClassMethod] - used for *context*
-        4) saveCoin() - [UsedWithClassMethod] - used for *context*
-        5) calculateCurrentMoneys() - this is create local variables and calculate current moneys
-        6) spendPerDay() - this is calculate acceptable sum of spends per day.
-        7) daysLeftToPayday() - *context*
-        8) autoStart() - [IMPORTANT] - [RunAPP] - this function calls all functions which dynamic creates calendar app
-        9) chosenDayHistory() - [EXPERIMENTAL] - chose day from calendar style this and show history of this day.
-        10) showOperations() - [EXPERIMENTAL] - show all operations of chosen day.
-        11) showToday() - [EXPERIMENTAL] - style for chosen day and show formatedDate
-        12) showDate() - Month and year into head of calendar
-        13) countOfDays() - *context* in worked month
-        14) fDayOfWeek() - Monday, tuesday & etc... This will use for creating calendar from right day of week
-        15) prevMonth() - button switch on previous month
-        16) nextMonth() - button switch on next month
-        17) buildCalendar() - draw full calendar.
+            this day can be setted by first day in month if user sets it wrong or didn't set.
+        3) takeCoin() - [UsedByClassMethod] - used for *context*
+        4) spendCoin() - [UsedByClassMethod] - used for *context*
+        5) saveCoin() - [UsedByClassMethod] - used for *context*
+        6) calculateCurrentMoneys() - this is create local variables and calculate current moneys
+            this func is takes all of array parts and calculate this.
+        8) spendPerDay() - this is calculate acceptable sum of spends per day.
+            if 20 days remains to payday = full sum / 20
+        10) daysLeftToPayday() - *context*
+        11) autoStart() - [IMPORTANT] - [RunAPP] - this function calls all functions which dynamic creates calendar app
+        12) chosenDayHistory() - [EXPERIMENTAL] - chose day from calendar style this and show history of this day.
+        13) showOperations() - [EXPERIMENTAL] - show all operations of chosen day.
+        14) showToday() - [EXPERIMENTAL] - style for chosen day and show formatedDate
+        15) showDate() - Month and year into head of calendar
+        16) countOfDays() - *context* in worked month
+        17) fDayOfWeek() - Monday, tuesday & etc... This will use for creating calendar from right day of week
+        18) prevMonth() - button switch on previous month
+        19) nextMonth() - button switch on next month
+        20) buildCalendar() - draw full calendar.

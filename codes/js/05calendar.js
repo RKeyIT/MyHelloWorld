@@ -36,6 +36,13 @@ function autoStart(){
 //     }
 // }
 let chosenDate
+function dayHistoryFromStart() {
+    let iD = document.getElementsByClassName('today');
+    for (i = 0; i <= iD.length; i++){
+        return iD = iD[i].id
+    }
+}
+chosenDayHistory(dayHistoryFromStart())
 function chosenDayHistory(id) {
     if(document.getElementById(id).classList.contains('shadowDay')){
         return;
