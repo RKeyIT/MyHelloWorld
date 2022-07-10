@@ -56,7 +56,7 @@ function chosenDayHistory(id) {
     } else {
         formatedDate = chosenDate.getDate()
     }
-    if(chosenDate.getMonth() < 10) {
+    if(chosenDate.getMonth() < 9) {
         formatedDate += '.0' + (chosenDate.getMonth() + 1);
     } else {
         formatedDate += '.' + (chosenDate.getMonth() + 1);
@@ -172,6 +172,43 @@ function prevMonth(){
     autoStart();
 }
 
+function nextDay(){
+    let dada = document.getElementsByClassName('chosenDay')
+        dada = dada[0].id
+        dada = dada.match(/\d+/)
+        dada = 'd' + (Number(dada[0]) + 1)
+
+        if(document.getElementById(dada).classList.contains('shadowDay')){
+            nextMonth()
+            for(i = 1; i <= 42; i++) {
+                if(!document.getElementById('d' + i).classList.contains('shadowDay') == true) {
+                    dada = 'd' + i;
+                    break
+                }
+            }
+            document.getElementById(dada).classList.add('chosenDay')
+            
+        }
+        chosenDayHistory(dada)
+}
+function prevDay(){
+    let dada = document.getElementsByClassName('chosenDay')
+        dada = dada[0].id
+        dada = dada.match(/\d+/)
+        dada = 'd' + (Number(dada[0]) - 1)
+
+        if(document.getElementById(dada).classList.contains('shadowDay')){
+            prevMonth()
+            for(i = 42; i >= 1; i--) {
+                if(!document.getElementById('d' + i).classList.contains('shadowDay') == true) {
+                    dada = 'd' + i;
+                    break
+                }
+            }
+            document.getElementById(dada).classList.add('chosenDay')
+        }
+        chosenDayHistory(dada)
+}
 
 function buildCalendar() {
 
@@ -214,3 +251,4 @@ function buildCalendar() {
 /****************END OF CALENDAR APP*************************/
 /****************END OF CALENDAR APP*************************/
 /****************END OF CALENDAR APP*************************/
+showToday()

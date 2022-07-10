@@ -33,7 +33,7 @@
     1.  --DONE--    Create visual calendar model.
     2.  --DONE--    Add visual style for current day into calendar. Border for example.
     3.  Delete operations from list when picked other day.
-    4.  Add function for chose next or prev day and style it.
+    4.  --DONE--    Add function for chose next or prev day and style it.
     5.  Add functions to assign dates to operations.
     6.  Add first styles. For days with some operations.
     7.  Create list with operations in "day". This must show what was does in this date

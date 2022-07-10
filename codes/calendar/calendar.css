@@ -82,8 +82,7 @@ rgb(199, 194, 194)          // use this background-color for normal days
     background-color: darkgray;
 }
 .chosenDay {
-    outline: 3px darkslateblue;
-    outline-style: dashed;
-    outline-offset: -3px;
-    color: darkslateblue;
+    outline: 5px rgb(201, 68, 68);
+    outline-style: inset;
+    outline-offset: -6px;
 }
