@@ -51,11 +51,10 @@ rgb(199, 194, 194)          // use this background-color for normal days
 
 .date {
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
-    background-color: rgb(199, 194, 194);
-    border-radius: 10%;
+    grid-template-columns: 1fr 5fr 1fr;
     text-align: center;
-    justify-items: center;
+    background-color: burlywood;
+    border-radius: 30%;
 }
 .dayOfWeek {
     background: rgb(131, 166, 160);
@@ -68,13 +67,17 @@ rgb(199, 194, 194)          // use this background-color for normal days
 }
 
 .arrow{
-    color: rgb(94, 41, 41);
+    background-color: rgb(201, 68, 68);
     user-select: none;
     cursor: pointer;
+    filter: brightness(100%);
+}
+.arrow:hover {
+    color: rgb(255, 0, 0);
+    filter:brightness(125%);
 }
 
 .today {
-    
     background-color: burlywood;
 }
 .shadowDay {
@@ -85,4 +88,5 @@ rgb(199, 194, 194)          // use this background-color for normal days
     outline: 5px rgb(201, 68, 68);
     outline-style: inset;
     outline-offset: -6px;
+    filter: brightness(90%);
 }

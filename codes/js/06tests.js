@@ -7,7 +7,7 @@ let minDate = 1641000000000;    //dates for test
 let maxDate = 1672500000000;    //dates for test
 testFill()
 function testFill() {
-for (i = 0; i < 10000; i++) {
+for (i = 0; i < 1000; i++) {
     coler = randomNum(3);
     if (coler == 0) {coler = 'green'};
     if (coler == 1) {coler = 'red'} ;
@@ -23,4 +23,10 @@ for (i = 0; i < 10000; i++) {
     
     MONEYS.push(coina);
 }
+for (i = 0; i < MONEYS.length; i++){
+    if(MONEYS[i].date.getDate() == 10 &&
+        MONEYS[i].date.getMonth() == 6) {
+            console.log(MONEYS[i])
+        }
+    }
 }

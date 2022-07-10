@@ -178,7 +178,7 @@ function nextDay(){
         dada = dada.match(/\d+/)
         dada = 'd' + (Number(dada[0]) + 1)
 
-        if(document.getElementById(dada).classList.contains('shadowDay')){
+        if(dada == 'd43' || document.getElementById(dada).classList.contains('shadowDay')){
             nextMonth()
             for(i = 1; i <= 42; i++) {
                 if(!document.getElementById('d' + i).classList.contains('shadowDay') == true) {
@@ -197,7 +197,7 @@ function prevDay(){
         dada = dada.match(/\d+/)
         dada = 'd' + (Number(dada[0]) - 1)
 
-        if(document.getElementById(dada).classList.contains('shadowDay')){
+        if(dada == 'd0' || document.getElementById(dada).classList.contains('shadowDay')){
             prevMonth()
             for(i = 42; i >= 1; i--) {
                 if(!document.getElementById('d' + i).classList.contains('shadowDay') == true) {
@@ -251,4 +251,3 @@ function buildCalendar() {
 /****************END OF CALENDAR APP*************************/
 /****************END OF CALENDAR APP*************************/
 /****************END OF CALENDAR APP*************************/
-showToday()
