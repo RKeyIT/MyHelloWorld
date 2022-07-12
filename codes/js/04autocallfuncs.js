@@ -23,6 +23,9 @@ for (i = 0; i < dailyOperations.length; i++) {
 }
 
 function colorizeDay() {
+    // colors
+    // green = 'green' etc
+
     if (greenCoins > redCoins &&
         greenCoins > blueCoins &&
         greenCoins > redCoins + blueCoins) {
@@ -38,11 +41,35 @@ function colorizeDay() {
         blueCoins > greenCoins + redCoins) {
         return colorizeDays = 'blue'
     }
+
+    if(greenCoins + blueCoins > redCoins &&
+        greenCoins > blueCoins + redCoins &&
+        blueCoins > greenCoins + redCoins
+        ) {
+            colorizeDays = 'cGreenBlue'
+        }
+    if(greenCoins + blueCoins < redCoins &&
+        greenCoins > blueCoins + redCoins &&
+        greenCoins + redCoins > blueCoins
+        ) {
+            colorizeDays = 'cGreenRed'
+        }
+    if (greenCoins + redCoins < blueCoins &&
+        greenCoins < blueCoins + redCoins &&
+        redCoins > greenCoins + blueCoins
+        ) {
+            colorizeDays = 'cRedBlue'
+        }
+
+
+
+
+
     if (greenCoins + blueCoins > redCoins) {
         colorizeDays = 'greenblue'
     }
     if (greenCoins + redCoins > blueCoins) {
-        colorizeDays = 'greenred'
+        colorizeDays = 'redgreen'
     }
     if (redCoins + blueCoins > greenCoins) {
         colorizeDays = 'redblue'

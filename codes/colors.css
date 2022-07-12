@@ -1,0 +1,22 @@
+.cRed {
+    background-color: brown;
+}
+.cGreen {
+    background-color: seagreen;
+}
+.cBlue {
+    background-color: midnightblue;
+}
+.cRedGreen {
+    background-color: yellowgreen;
+}
+.cRedBlue {
+    background-color: darkorchid;
+}
+.cGreenBlue {
+    background-color:skyblue;
+}
+
+.cRed, .cBlue, .cGreen, .cGreenBlue, .cRedBlue, .cRedGreen {
+    filter: brightness(75%);
+}

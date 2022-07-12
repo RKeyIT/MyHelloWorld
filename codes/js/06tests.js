@@ -16,7 +16,11 @@ for (i = 0; i < 1000; i++) {
     
 
     let coina = new Coin();
-        coina.amount = Math.floor(Math.random()*1000000);
+        if(coler == 'green'){
+            coina.amount = Math.floor(Math.random()*300);
+        } else {
+            coina.amount = Math.floor(Math.random()*100);
+        }
         coina.date = new Date(Math.floor(Math.random()*(maxDate - minDate) + minDate));
         coina.color = coler;
         coina.comment = 'test';
