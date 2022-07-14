@@ -115,4 +115,32 @@ function colorizeDay() {
         }
 
     document.getElementById('d25').classList.add('cRed') // need to shose id of day 
+
+    for(i = 0; i < MONEYS.length; i++) {
+        let dayEqual = MONEYS[i].date.getDate()
+        let monthEqual = MONEYS[i].date.getMonth()
+        let yearEqual = MONEYS[i].date.getFullYear()
+
+        dailyOperations.push(MONEYS[i])
+        let usedDates = []
+        usedDates.push(MONEYS[i])
+
+    }
 }
+
+
+// cycle cycle cycle
+
+    function searchRepeatDays() {
+        let j = 0;
+        while(j < usedDates.length) {
+            if(usedDates[j].date.getDate() == MONEYS[i].date.getDate() &&
+            usedDates[j].date.getMonth() == MONEYS[i].date.getMonth() &&
+            usedDates[j].date.getFullYear() == MONEYS[i].date.getFullYear()) {
+                
+            }
+
+            j++
+        }
+    }
+

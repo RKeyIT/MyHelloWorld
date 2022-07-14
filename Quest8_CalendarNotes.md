@@ -16,7 +16,13 @@ Variables, Arrays, Objects...
 
     <Full rework for 10-11 tasks. Calendar taked big update...>
 
-13. FIX INCORRECT DATA SHOW / Create function onclick on day into calendar for showing history of this day.
-    1) This needs function with (x) where x is id of day f.e. d23.
-    2) Slice this string and get number 23 and equal this with cycle for
-    3) May be rechange all IDs "d##" on "0##"?
+13. <DONE> FIX INCORRECT DATA SHOW / Create function onclick on day into calendar for showing history of this day.
+    <DONE>  1) This needs function with (x) where x is id of day f.e. d23.
+    <DONE>  2) Slice this string and get number 23 and equal this with cycle for
+    <DENY>  3) May be rechange all IDs "d##" on "0##"?
+
+14. Colorfull calendar. <COLORIZE DAYS ONLY IN CURRENT MONTH>
+    1.  Cycle gets current month and equal all of MONEYS with this month and colorize days after
+    2.  Needs cycle for catching all dates  'Operations with MONEYS[]'
+    3.  Needs cycle for clear date writes (without repeats) [AnotherOneArray]
+    4.  Needs cycle for colorize all dates into calendar.

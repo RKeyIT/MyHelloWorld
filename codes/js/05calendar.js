@@ -2,20 +2,6 @@
 /*****************STARTS OF CALENDAR APP*******************/
 /*****************STARTS OF CALENDAR APP*******************/
 
-// DEBUGGING COIN OBJECT START
-
-// coin = new Coin; 
-
-//     coin.date = new Date();
-//     coin.amount = '100';
-//     coin.color = 'green';
-//     coin.comment = 'checker';
-
-// MONEYS.push(coin)
-// MONEYS.push(coin)
-
-// DEBUGGING COIN OBJECT END
-
 
 /******************CALENDAR AUTOSTART*********************/
 autoStart()
