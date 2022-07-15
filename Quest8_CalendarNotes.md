@@ -22,7 +22,8 @@ Variables, Arrays, Objects...
     <DENY>  3) May be rechange all IDs "d##" on "0##"?
 
 14. Colorfull calendar. <COLORIZE DAYS ONLY IN CURRENT MONTH>
-    1.  Cycle gets current month and equal all of MONEYS with this month and colorize days after
-    2.  Needs cycle for catching all dates  'Operations with MONEYS[]'
-    3.  Needs cycle for clear date writes (without repeats) [AnotherOneArray]
-    4.  Needs cycle for colorize all dates into calendar.
+    1.  <DONE>Cycle gets current month and equal all of MONEYS with this month and colorize days after
+    2.  Add color class for any day of current month
+    3.  Needs cycle for catching all dates  'Operations with MONEYS[]'
+    4.  Needs cycle for clear date writes (without repeats) [AnotherOneArray]
+    5.  Needs cycle for colorize all dates into calendar.
