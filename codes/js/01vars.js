@@ -16,3 +16,10 @@ let payday  =  1;             //   Day of date of general money takes.
 let spendResult = 0;    //  Installed by function   ...     after calculate dates
 
 let coin;           // always new object from class Coin
+
+/*******************/
+let colorizeDays = '';
+let greenCoins = 0;
+let redCoins = 0;
+let blueCoins = 0;
+/*******************/

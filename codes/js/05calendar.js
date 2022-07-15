@@ -112,9 +112,8 @@ function showToday() {  //TAKE idOfDay NUMBER FROM buildCalendar() where is need
         month == generalDate.getMonth()) {
             document.getElementById(idOfDay).classList.add('today')
         }
-    }
-
-    // SHOW INFO ABOUT CURRENT DAY INTO operationsWindow
+        
+        // SHOW INFO ABOUT CURRENT DAY INTO operationsWindow
 
     //  SHOW OPERATIONS BY CURRENT DAY
     let formatedDate = '';
@@ -131,6 +130,7 @@ function showToday() {  //TAKE idOfDay NUMBER FROM buildCalendar() where is need
     formatedDate += '.' + generalDate.getFullYear();
     document.getElementById('chosenDate').innerHTML = formatedDate;
 }
+}
 
 function showDate() {
     let mm = currentTime.toLocaleString('default', {month: 'long'}).charAt().toUpperCase() + 
@@ -138,7 +138,8 @@ function showDate() {
     let yyyy = currentTime.getFullYear();
     let showingDate = mm + ' ' + yyyy;
     document.getElementById('fullDate').innerHTML = showingDate;
-}
+    }
+
 
 function countOfDays() {    //  returns count of days in current month
     daysInMonth = new Date(year, month + 1, 0).getDate()
@@ -197,10 +198,10 @@ function prevDay(){
 }
 
 /****************TEST FUNCTIONS FOR COLORISING**************/
-let colorizeDays = '';
-let greenCoins = 0;
-let redCoins = 0;
-let blueCoins = 0;
+// let colorizeDays = '';
+// let greenCoins = 0;
+// let redCoins = 0;
+// let blueCoins = 0;
 
 
 function fillDay(idOfDay) {
@@ -263,6 +264,8 @@ function colorizeDay() {
         ) {
         colorizeDays = 'cRedBlue'
         }
+    if (colorizeDays == '') {colorizeDays = 'cGreen'}
+    console.log(colorizeDays)
 }
 /****************TEST FUNCTIONS FOR COLORISING**************/
 
