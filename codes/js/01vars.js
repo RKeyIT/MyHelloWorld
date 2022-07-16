@@ -23,3 +23,5 @@ let greenCoins = 0;
 let redCoins = 0;
 let blueCoins = 0;
 /*******************/
+
+let num = 0; //test var for autofill tests
