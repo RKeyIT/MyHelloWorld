@@ -198,10 +198,6 @@ function prevDay(){
 }
 
 /****************TEST FUNCTIONS FOR COLORISING**************/
-// let colorizeDays = '';
-// let greenCoins = 0;
-// let redCoins = 0;
-// let blueCoins = 0;
 
 
 function fillDay() {
@@ -231,7 +227,7 @@ function colorizeDay() {
     // 1. Date -> dailyOperations[]
     // 2. dailyOperations -> color
     // 3. Recycle
-
+    if(greenCoins == 0 && redCoins == 0 && blueCoins == 0) {return}
     if(greenCoins > redCoins && greenCoins > blueCoins) {
         colorizeDays = 'cGreen'
     }
@@ -311,7 +307,7 @@ function buildCalendar() {
         dayOfWeek++
         document.getElementById(idOfDay).innerHTML = i;
         document.getElementById(idOfDay).classList.remove('shadowDay')
-        // debugger
+        
         fillDay()
     }
 /*****************CURRENT MONTH NORMAL**************************/

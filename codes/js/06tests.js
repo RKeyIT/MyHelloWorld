@@ -5,6 +5,7 @@ function randomNum(max) {
 
 let minDate = new Date(2022, 0, 1).getTime();    //dates for test
 let maxDate = new Date(2023, 0, 1).getTime();    //dates for test
+
 testFill()
 function testFill() {
 for (i = 0; i < 1000; i++) {
@@ -28,7 +29,7 @@ for (i = 0; i < 1000; i++) {
     MONEYS.push(coina);
 }
 for (i = 0; i < MONEYS.length; i++){
-    if(MONEYS[i].date.getDate() == 13 &&
+    if(MONEYS[i].date.getDate() == 17 &&
         MONEYS[i].date.getMonth() == 6) {
             console.log(MONEYS[i], i)
         }
