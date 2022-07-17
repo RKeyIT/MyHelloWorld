@@ -64,8 +64,6 @@ class Coin {        // Class and after this functions for this class
     function takeCoin() {
         if (
             document.getElementById('add').value === '' || 
-            Number(document.getElementById('add').value) !== 
-            Number(document.getElementById('add').value) || 
             document.getElementById('add').value <= 0
             ) {
                 return
@@ -81,8 +79,6 @@ class Coin {        // Class and after this functions for this class
     function spendCoin() {
         if (
             document.getElementById('less').value === '' || 
-            Number(document.getElementById('less').value) !== 
-            Number(document.getElementById('less').value) || 
             document.getElementById('less').value <= 0
             ) {return}
         else {
@@ -97,8 +93,6 @@ class Coin {        // Class and after this functions for this class
     function saveCoin() {
         if (
             document.getElementById('save').value === '' || 
-            Number(document.getElementById('save').value) !== 
-            Number(document.getElementById('save').value) || 
             document.getElementById('save').value <= 0
             ) {return}
         else {

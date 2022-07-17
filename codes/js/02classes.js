@@ -22,14 +22,11 @@ class Coin {        // Class and after this functions for this class
         MONEYS.push(coin)
     }
 }
+
 //Operative functions with this class
     function takeCoin() {
-        if (
-            document.getElementById('add').value === '' || 
-            document.getElementById('add').value <= 0
-            ) {
-                return
-            } else {
+        if (document.getElementById('add').value <= 0) {return}
+        else {
         coin = new Coin()
         coin.take();
         calculateCurrentMoneys();
@@ -39,10 +36,7 @@ class Coin {        // Class and after this functions for this class
         }
     }
     function spendCoin() {
-        if (
-            document.getElementById('less').value === '' || 
-            document.getElementById('less').value <= 0
-            ) {return}
+        if (document.getElementById('less').value <= 0) {return}
         else {
         coin = new Coin ()
         coin.spend();
@@ -53,10 +47,7 @@ class Coin {        // Class and after this functions for this class
         }
     }
     function saveCoin() {
-        if (
-            document.getElementById('save').value === '' || 
-            document.getElementById('save').value <= 0
-            ) {return}
+        if (document.getElementById('save').value <= 0) {return}
         else {
         coin = new Coin ()
         coin.save();
