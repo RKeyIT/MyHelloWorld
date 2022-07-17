@@ -1,11 +1,11 @@
 .cRed {
-    background-color: rgb(255, 200, 200);
+    background-color: brown;
 }
 .cGreen {
-    background-color: rgb(200, 255, 200);
+    background-color: seagreen;
 }
 .cBlue {
-    background-color: rgb(200, 200, 255);
+    background-color: midnightblue;
 }
 .cRedGreen {
     background-color: yellowgreen;

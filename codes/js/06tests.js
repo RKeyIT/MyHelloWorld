@@ -3,9 +3,8 @@ function randomNum(max) {
     return Math.floor(Math.random() * max)
 }
 
-let minDate = new Date(2022, 0, 1).getTime();    //dates for test
-let maxDate = new Date(2023, 0, 1).getTime();    //dates for test
-
+let minDate = 1641000000000;    //dates for test
+let maxDate = 1672500000000;    //dates for test
 testFill()
 function testFill() {
 for (i = 0; i < 1000; i++) {
@@ -18,9 +17,9 @@ for (i = 0; i < 1000; i++) {
 
     let coina = new Coin();
         if(coler == 'green'){
-            coina.amount = Math.floor(Math.random()*1000);
+            coina.amount = Math.floor(Math.random()*300);
         } else {
-            coina.amount = Math.floor(Math.random()*1000);
+            coina.amount = Math.floor(Math.random()*100);
         }
         coina.date = new Date(Math.floor(Math.random()*(maxDate - minDate) + minDate));
         coina.color = coler;
@@ -29,9 +28,9 @@ for (i = 0; i < 1000; i++) {
     MONEYS.push(coina);
 }
 for (i = 0; i < MONEYS.length; i++){
-    if(MONEYS[i].date.getDate() == 17 &&
+    if(MONEYS[i].date.getDate() == 13 &&
         MONEYS[i].date.getMonth() == 6) {
-            console.log(MONEYS[i], i)
+            console.log(MONEYS[i])
         }
     }
 }
