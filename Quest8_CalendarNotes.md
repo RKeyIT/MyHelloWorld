@@ -23,7 +23,8 @@ Variables, Arrays, Objects...
 
 14. Colorfull calendar. <COLORIZE DAYS ONLY IN CURRENT MONTH>
     1.  <DONE>Cycle gets current month and equal all of MONEYS with this month and colorize days after
-    2.  Add color class for any day of current month
-    3.  Needs cycle for catching all dates  'Operations with MONEYS[]'
+    2.  <DONE>Add color class for any day of current month
+    3.  <DONE>Needs cycle for catching all dates  'Operations with MONEYS[]'
     4.  Needs cycle for clear date writes (without repeats) [AnotherOneArray]
-    5.  Needs cycle for colorize all dates into calendar.
+    5.  <DONE>Needs cycle for colorize all dates into calendar.
+    6.  Add prev option for next and prev monthes

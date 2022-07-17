@@ -198,57 +198,64 @@ function prevDay(){
 }
 
 /****************TEST FUNCTIONS FOR COLORISING**************/
-// let colorizeDays = '';
-// let greenCoins = 0;
-// let redCoins = 0;
-// let blueCoins = 0;
 
 
-// function fillDay(idOfDay) {
-// for (i = 0; i < MONEYS.length; i++) {
-//     if (MONEYS[i].date.getDate() == document.getElementById(idOfDay).innerHTML &&
-//         MONEYS[i].date.getMonth() == month + 1) {
-//         dailyOperations.push(MONEYS[i])
-//         console.log(i)
-//     }
+function fillDay() {
+for (j = 0; j < MONEYS.length; j++) {
+    dailyOperations.length = 0;
+    if (MONEYS[j].date.getDate() == num &&
+        MONEYS[j].date.getMonth() == month) {
+        dailyOperations.push(MONEYS[j])
+    }
+    for (k = 0; k < dailyOperations.length; k++) { 
+        if (dailyOperations[k].color == 'green') {
+            greenCoins += dailyOperations[k].amount
+        }
+        if (dailyOperations[k].color == 'red') {
+            redCoins += dailyOperations[k].amount
+        }
+        if (dailyOperations[k].color == 'blue') {
+            blueCoins += dailyOperations[k].amount
+        }
+    }
+    colorizeDay()
+    }
+}
 
-// }
-// for (i = 0; i < dailyOperations.length; i++) { 
-//     if (dailyOperations[i].color == 'green') {
-//         greenCoins += dailyOperations[i].amount
-//     }
-//     if (dailyOperations[i].color == 'red') {
-//         redCoins += dailyOperations[i].amount
-//     }
-//     if (dailyOperations[i].color == 'blue') {
-//         blueCoins += dailyOperations[i].amount
-//     }
-// }
-// }
+function colorizeDay() {
+    // Cycle must to know what a day for it works.
+    // 1. Date -> dailyOperations[]
+    // 2. dailyOperations -> color
+    // 3. Recycle
+    if(greenCoins == 0 && redCoins == 0 && blueCoins == 0) {return}
+    if(greenCoins > redCoins && greenCoins > blueCoins) {
+        colorizeDays = 'cGreen'
+    }
+    if(redCoins > greenCoins && redCoins > blueCoins) {
+        colorizeDays = 'cRed'
+    }
+    if(blueCoins > greenCoins && blueCoins > redCoins) {
+        colorizeDays = 'cBlue'
+    }
 
-// function colorizeDay() {
-//     // Cycle must to know what a day for it works.
-//     // 1. Date -> dailyOperations[]
-//     // 2. dailyOperations -> color
-//     // 3. Recycle
 
-//         if(greenCoins > blueCoins + redCoins &&
-//             greenCoins > redCoins && greenCoins > blueCoins) {
-//                 colorizeDays = 'cGreen'
-//             }
+        // if(greenCoins > blueCoins + redCoins &&
+        //     greenCoins > redCoins && greenCoins > blueCoins) {
+        //         colorizeDays = 'cGreen'
+        //     }
 
-//         if(redCoins > greenCoins + blueCoins &&
-//         redCoins > greenCoins && redCoins > blueCoins) {
-//             colorizeDays = 'cRed'
-//         }
-//         if(blueCoins > greenCoins + redCoins &&
-//             blueCoins > greenCoins && blueCoins > redCoins) {
-//                 colorizeDays = 'cBlue'
-//             }
+        // if(redCoins > greenCoins + blueCoins &&
+        // redCoins > greenCoins && redCoins > blueCoins) {
+        //     colorizeDays = 'cRed'
+        // }
+        // if(blueCoins > greenCoins + redCoins &&
+        //     blueCoins > greenCoins && blueCoins > redCoins) {
+        //         colorizeDays = 'cBlue'
+        //     }
 
-//     if (colorizeDays == '') {colorizeDays = 'cRedBlue'}
-//     console.log(colorizeDays)
-// }
+    if (colorizeDays == '') {colorizeDays = 'cRedBlue'}
+    document.getElementById(idOfDay).classList.add(colorizeDays)
+}
 /****************TEST FUNCTIONS FOR COLORISING**************/
 
 
@@ -257,6 +264,24 @@ function prevDay(){
 
 
 function buildCalendar() {
+    //clear coloriseDays
+    for(i = 1; i < 43; i++) {
+        let dayId = 'd' + i;
+    if(
+        document.getElementById(dayId).classList.contains('cGreen') ||
+        document.getElementById(dayId).classList.contains('cRed') ||
+        document.getElementById(dayId).classList.contains('cBlue') ||
+        document.getElementById(dayId).classList.contains('cRedBlue')
+        ){
+            document.getElementById(dayId).classList.remove('cGreen')
+            document.getElementById(dayId).classList.remove('cRed')
+            document.getElementById(dayId).classList.remove('cBlue')
+            document.getElementById(dayId).classList.remove('cRedBlue')
+        }
+    }
+    //clear coloriseDays
+
+
 
 /*****************PREV MONTH SHADOW**************************/
     daysInMonth = new Date(year, month, 0).getDate()
@@ -272,6 +297,7 @@ function buildCalendar() {
     daysInMonth = new Date(year, month + 1, 0).getDate()
     dayOfWeek   = new Date(year, month, 1).getDay()
     for(i = 1; i <= daysInMonth; i++) {
+        num = i
         if(dayOfWeek === 0) {
             dayOfWeek = 7
             idOfDay = 'd' + dayOfWeek;
@@ -280,11 +306,9 @@ function buildCalendar() {
         };
         dayOfWeek++
         document.getElementById(idOfDay).innerHTML = i;
-        console.log(idOfDay)
         document.getElementById(idOfDay).classList.remove('shadowDay')
-        // fillDay(idOfDay)
-        // colorizeDay()
-        // document.getElementById(idOfDay).classList.add(colorizeDays)
+        
+        fillDay()
     }
 /*****************CURRENT MONTH NORMAL**************************/
 
