@@ -9,7 +9,7 @@ Regular expressions, special symbols:
 []  = any symbol from this
 ^   = start of string (new string) 
     BUT this symbol into [^] = symbol '!' into javascript.
-    This means need search NOT this symbol. For example: [^n] This is will be search any symbols without 'n'
+    This means need search NOT this symbol. For example: [^n] This is will be search any symbols exclusive 'n'
 ?   = 0 or 1
 $   = end of string$. Last symbol of any string.
 *   = from 0 to Infinity.

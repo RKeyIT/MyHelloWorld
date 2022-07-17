@@ -309,7 +309,7 @@ function buildCalendar() {
         document.getElementById(idOfDay).classList.remove('shadowDay')
         
         fillDay()
-    }
+    } 
 /*****************CURRENT MONTH NORMAL**************************/
 
 /*****************NEXT MONTH SHADOW**************************/
