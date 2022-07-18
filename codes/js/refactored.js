@@ -104,3 +104,4 @@ class Coin {        // Class and after this functions for this class
         document.getElementById('saveFor').value = '';
         }
     }
+
