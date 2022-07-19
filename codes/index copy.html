@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaveYourMoney</title>
+    <link rel="stylesheet" href="rezero.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="colors.css">
+    <!-- <link rel="stylesheet" href="calendar/calendar.css"> -->
+    
+</head>
+<body>
+
+
+    <!-- FOR NOT A LONG TIME CALENDAR WILL BE FIRST IN PAGE FOR DEBUGGING -->
+    <!-- CALENDAR APP -->
+    <div class="wrapper">
+        <div class="calendar">
+            <div class="date">
+                <span class="arrow" onclick="prevMonth()">⇐</span>
+                <span id="fullDate">01.01.0101</span>
+                <span class="arrow" onclick="nextMonth()">⇒</span>
+            </div>
+                
+            <div class="calendarDaysWindow">
+    
+                <div id="monday" class="square dayOfWeek">Mon</div>
+                <div id="tuesday" class="square dayOfWeek">Tue</div>
+                <div id="wednesday" class="square dayOfWeek">Wed</div>
+                <div id="thursday" class="square dayOfWeek">Thu</div>
+                <div id="friday" class="square dayOfWeek">Fri</div>
+                <div id="saturday" class="square dayOffs">Sat</div>
+                <div id="sunday" class="square dayOffs">Sun</div>
+    
+                <div id="d1" class="square day" onclick="chosenDayHistory(this.id)"></div>
+                <div id="d2" class="square day" onclick="chosenDayHistory(this.id)"></div>
+                <div id="d3" class="square day" onclick="chosenDayHistory(this.id)"></div>
+                <div id="d4" class="square day" onclick="chosenDayHistory(this.id)"></div>
+                <div id="d5" class="square day" onclick="chosenDayHistory(this.id)"></div>
+                <div id="d6" class="square day dayOff" onclick="chosenDayHistory(this.id)"></div>
+                <div id="d7" class="square day dayOff" onclick="chosenDayHistory(this.id)"></div>
+    
+                <div id="d8" class="square day" onclick="chosenDayHistory(this.id)"></div>
+                <div id="d9" class="square day" onclick="chosenDayHistory(this.id)"></div>
+                <div id="d10" class="square day" onclick="chosenDayHistory(this.id)"></div>
+                <div id="d11" class="square day" onclick="chosenDayHistory(this.id)"></div>
+                <div id="d12" class="square day" onclick="chosenDayHistory(this.id)"></div>
+                <div id="d13" class="square day dayOff" onclick="chosenDayHistory(this.id)"></div>
+                <div id="d14" class="square day dayOff" onclick="chosenDayHistory(this.id)"></div>
+    
+                <div id="d15" class="square day" onclick="chosenDayHistory(this.id)"></div>
+                <div id="d16" class="square day" onclick="chosenDayHistory(this.id)"></div>
+                <div id="d17" class="square day" onclick="chosenDayHistory(this.id)"></div>
+                <div id="d18" class="square day" onclick="chosenDayHistory(this.id)"></div>
+                <div id="d19" class="square day" onclick="chosenDayHistory(this.id)"></div>
+                <div id="d20" class="square day dayOff" onclick="chosenDayHistory(this.id)"></div>
+                <div id="d21" class="square day dayOff" onclick="chosenDayHistory(this.id)"></div>
+    
+                <div id="d22" class="square day" onclick="chosenDayHistory(this.id)"></div>
+                <div id="d23" class="square day" onclick="chosenDayHistory(this.id)"></div>
+                <div id="d24" class="square day" onclick="chosenDayHistory(this.id)"></div>
+                <div id="d25" class="square day" onclick="chosenDayHistory(this.id)"></div>
+                <div id="d26" class="square day" onclick="chosenDayHistory(this.id)"></div>
+                <div id="d27" class="square day dayOff" onclick="chosenDayHistory(this.id)"></div>
+                <div id="d28" class="square day dayOff" onclick="chosenDayHistory(this.id)"></div>
+    
+                <div id="d29" class="square day" onclick="chosenDayHistory(this.id)"></div>
+                <div id="d30" class="square day colorisedDay" onclick="chosenDayHistory(this.id)"></div>
+                <div id="d31" class="square day" onclick="chosenDayHistory(this.id)"></div>
+                <div id="d32" class="square day" onclick="chosenDayHistory(this.id)"></div>
+                <div id="d33" class="square day" onclick="chosenDayHistory(this.id)"></div>
+                <div id="d34" class="square day dayOff" onclick="chosenDayHistory(this.id)"></div>
+                <div id="d35" class="square day dayOff" onclick="chosenDayHistory(this.id)"></div>
+    
+                <div id="d36" class="square day" onclick="chosenDayHistory(this.id)"></div>
+                <div id="d37" class="square day" onclick="chosenDayHistory(this.id)"></div>
+                <div id="d38" class="square day" onclick="chosenDayHistory(this.id)"></div>
+                <div id="d39" class="square day" onclick="chosenDayHistory(this.id)"></div>
+                <div id="d40" class="square day" onclick="chosenDayHistory(this.id)"></div>
+                <div id="d41" class="square day dayOff" onclick="chosenDayHistory(this.id)"></div>
+                <div id="d42" class="square day dayOff" onclick="chosenDayHistory(this.id)"></div>
+    
+            </div>
+            <div class="calendarNotes">
+                <div class="dateBlock">
+                    <span id="prevDay" class="arrow" onclick="prevDay()">⇐</span>
+                    <span id="chosenDate">28.06.2022</span>
+                    <span id="nextDay" class="arrow" onclick="nextDay()">⇒</span>
+                </div>
+                <div class="operationsWindow">  <!--ADD STYLE FOR BETTER SEE-->
+                    <div class="note1" id="note1">
+                        <span id="symbol" class="symbol"></span>
+                        <span id="amount" class="amount"></span>
+                        <span id="time" class="time"></span>
+                        <div id="comment" class="comment"></div>
+                    </div>
+                    <!-- <div class="note2">
+                        <span id="symbol" class="symbol">+</span>
+                        <span id="amount" class="amount">250</span>
+                        <span id="time" class="time">12:34</span>
+                        <div id="comment" class="comment">sdf sdfsfsfsd s</div>
+                    </div> -->
+                </div>
+                <div id="fullHistory">Show full history</div>
+            </div>
+        </div>
+    </div>
+    <!-- CALENDAR APP -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- STATICTIC PAGE -->
+    <div class="wrapper">
+        <div class="statistic">
+            <div class="currentMoneys">
+                <p>
+                    <label for="current">Current coins
+                        <span id="yourCurrent">0</span>
+                    </label>
+                </p>
+            </div>
+            <div class="perDay">
+                <p>
+                    <label for="perDay">You can to spend <span id="perDay">0</span> coins today.</label>
+                    <br>
+                </p>
+                <p>
+                    <label for="leftToPayday">
+                    <span id="leftToPayday">0</span>
+                    <span id="dayLeft">days</span> left to payday.
+                    </label>
+                </p>
+                <p>
+                    <label for="everyPayday">Payday setted every <span id="everyPayday">1</span> day of month</label>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- STATICTIC PAGE -->
+
+
+
+
+
+    <!-- OPERATIONS PAGE -->
+
+    <div class="wrapper">
+        <div class="operations">
+            <div class="payday">
+                <p>    <!--    here is something wrong     -->
+                        <!-- sometimes console returns ATTANTION "can't get element cause its null"-->
+                    <label for="">Day of PayDay</label><input type="text" min="1" max="28" maxlength="2"
+                        name="DayOfPayDay" id="payday" placeholder="1-28 numbers"
+                        oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                    <button type="submit" id="payDayButton" onclick="payDay()">Set day</button>
+                    <!--    wrong code ends     -->
+                </p>
+            </div>
+            <div class="add">
+                <p>    <!--  ADD COINS -->
+                    <label>Contribute coins<input type="text" id="add" placeholder="+moneys"                       
+                        oninput="this.value = this.value.replace(/[^0-9]/g, '')"></label>
+                </p>
+                <p>
+                    <label>From what you added?</label><input type="text" id="addedFrom" placeholder="Contributed from...">
+                </p>
+                <p>
+                    <button type="submit" id="addButton" onclick="takeCoin()">Add</button>
+                </p>
+            </div>
+            <div class="lose">
+                <p>     <!--  SPEND COINS    -->
+                    <label>Spend coins<input type="text" id="less" placeholder="-moneys"
+                        oninput="this.value = this.value.replace(/[^0-9]/g, '')"></label>
+                </p>
+                <p>
+                    <label>For what your want to spend your moneys?</label><input type="text" id="losedFor" placeholder="Spended for...">
+                </p>
+                <p>
+                    <button type="submit" id="loseButton" onclick="spendCoin()">Spend</button>
+                </p>
+            </div>
+            <div class="save">
+                <p>     <!--  SAVE COINS -->
+                    <label>What count of coins you want to save?</label><input type="text" id="save"
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                    placeholder="amount of saved coins">
+                </p>
+                <p>
+                    <label for="saveFor">Comment:</label><input type="text" id="saveFor"
+                    placeholder="for what? :)">
+                </p>
+                <p>
+                    <button type="submit" id="saveButton" onclick="saveCoin()">Save</button>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- OPERATIONS PAGE -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="strict.js"></script>
+
+    
+    <!-- <script src="js/refactored.js"></script> -->
+    
+    <!-- <script src="js/general.js"></script> -->
+
+    <!-- <script src="js/variables.js"></script>
+    <script src="js/functions.js"></script> -->
+<!--     
+    <script src="js/01vars.js"></script>
+    <script src="js/02classes.js"></script>
+    <script src="js/03noautocallfuncs.js"></script>
+    <script src="js/04autocallfuncs.js"></script>
+    <script src="js/06tests.js"></script>
+    <script src="js/05calendar.js"></script> -->
+
+</body>
+</html>
