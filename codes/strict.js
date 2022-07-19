@@ -20,14 +20,14 @@ const idOfDays  =   ['NotAnID', 'd1', 'd2', 'd3', 'd4',
 buildCalendar()
 function buildCalendar() {
     function buildPrevMonthShadows() {
-        let daysInMonth = new Date(year, month, 0).getDate();
-        let dayOfWeek = new Date(year, month, 1).getDay();  // loop index
+        let days = new Date(year, month, 0).getDate();
+        let fromDay = new Date(year, month, 0).getDay();  // loop index
 
-        while(dayOfWeek != 1){
-            document.getElementById(idOfDays[dayOfWeek - 1]).classList.add('shadowDay');
-            document.getElementById(idOfDays[dayOfWeek - 1]).innerHTML = daysInMonth;
-            dayOfWeek--;
-            daysInMonth--;
+        while(fromDay > 0){
+            document.getElementById(idOfDays[fromDay]).classList.add('shadowDay');
+            document.getElementById(idOfDays[fromDay]).innerHTML = days;
+            fromDay--;
+            days--;
         }
     }
     let varForNextMonth = 0;
@@ -55,3 +55,31 @@ function buildCalendar() {
     buildCurrentMonth();
     buildNextMonthShadows();
 }
+
+
+
+// NEW CONCEPTION OF CALENDAR BUILDINGS
+date = new Date(0)
+year = date.getFullYear()
+month = date.getMonth()
+day = date.getDate()
+
+const dates = []
+
+let i = 0;
+while(year != 2038) {
+    data = new Date(year, month, day)
+	if(data.getFullYear() == new Date(year + 1, 0, 1).getFullYear()) {
+        year++
+        month = 0;
+    } 
+    if(data.getMonth() == new Date(year, month + 1, 1).getMonth()){
+        month++
+        day = 1;
+    }
+    dates.push(data)
+    day++
+}
+
+dates
+// NEW CONCEPTIONS OF CALENDAR BUILDINGS
