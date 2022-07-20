@@ -59,6 +59,15 @@ function buildCalendar() {
 
 
 // NEW CONCEPTION OF CALENDAR BUILDINGS
+class DataDate {
+    constructor(options){
+        this.name = options.name;   //  for example 1997, 02, 04 = '19970204' or 'd19970204'
+        this.id = options.id;       //  'd' + ? must be automatic fillings like 'd3' for good works with HTML file
+        this.date = options.date;   //  from this date object create self name and that's need for equalling with Coin dates
+        this.operations = [];       //  this array will save Coins which equal with this.(options.)date
+    }
+}
+
 date = new Date(0)
 year = date.getFullYear()
 month = date.getMonth()
@@ -66,7 +75,6 @@ day = date.getDate()
 
 const dates = []
 
-let i = 0;
 while(year != 2038) {
     data = new Date(year, month, day)
 	if(data.getFullYear() == new Date(year + 1, 0, 1).getFullYear()) {
