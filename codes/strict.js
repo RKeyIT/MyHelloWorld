@@ -60,34 +60,44 @@ function buildCalendar() {
 
 // NEW CONCEPTION OF CALENDAR BUILDINGS
 class DataDate {
-    constructor(options){
-        this.name = options.name;   //  for example 1997, 02, 04 = '19970204' or 'd19970204'
-        this.id = options.id;       //  'd' + ? must be automatic fillings like 'd3' for good works with HTML file
-        this.date = options.date;   //  from this date object create self name and that's need for equalling with Coin dates
+    constructor(name, date, id){
+        this.name = name;   //  for example 1997, 02, 04 = '19970204' or 'd19970204'
+        this.date = date;   //  from this date object create self name and that's need for equalling with Coin dates
+        this.id = id;       //  'd' + ? must be automatic fillings like 'd3' for good works with HTML file
         this.operations = [];       //  this array will save Coins which equal with this.(options.)date
     }
 }
 
-date = new Date(0)
-year = date.getFullYear()
-month = date.getMonth()
-day = date.getDate()
-
 const dates = []
+function buildCalendarByObjectArray() {
+    let dateZero = new Date(0)
+        year = dateZero.getFullYear()
+        month = dateZero.getMonth()
+        day = dateZero.getDate()
 
-while(year != 2038) {
-    data = new Date(year, month, day)
-	if(data.getFullYear() == new Date(year + 1, 0, 1).getFullYear()) {
-        year++
-        month = 0;
-    } 
-    if(data.getMonth() == new Date(year, month + 1, 1).getMonth()){
-        month++
-        day = 1;
+
+    while(year != 2038) {
+        let data = new Date(year, month, day)
+        let id;
+	    if(data.getFullYear() == new Date(year + 1, 0, 1).getFullYear()) {
+            year++
+            month = 0;
+        } 
+        if(data.getMonth() == new Date(year, month + 1, 1).getMonth()){
+            month++
+            day = 1;
+        }
+        let name = 'd' + data.getFullYear() + '' + 
+                    data.getMonth() < 10 ? '0' + data.getMonth() : 
+                    data.getMonth() + '' + data.getDate()
+        if(id == undefined) {
+            id = 'd' + data.getDay()
+        } 
+        let date = data
+        let dayX = new DataDate(name, date, id)
+        dates.push(dayX)
+        day++
     }
-    dates.push(data)
-    day++
-}
-
 dates
 // NEW CONCEPTIONS OF CALENDAR BUILDINGS
+}
