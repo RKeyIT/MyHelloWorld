@@ -1,0 +1,1 @@
+first = null('22.07.2022 - was finished eng course of basics JS before begins WEB Development basics (HTML & CSS)')
